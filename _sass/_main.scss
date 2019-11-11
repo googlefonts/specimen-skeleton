@@ -1,0 +1,52 @@
+// Fonts stuff
+//
+// This will be replaced by calls to the Google Fonts API
+@font-face {
+	font-family: Fraunces;
+	src: url(../Fraunces_GoofyAxis-VF.ttf);
+	font-weight: 1 1000;
+}
+
+@font-face {
+	font-family: Fraunces;
+	src: url(../FrauncesItalic_GoofyAxis-VF.ttf);
+	font-style: italic;
+}
+
+// Setup
+:root {
+	--page-bg: #{$page-bg};
+	--page-text: #{$page-text};
+
+	// Font axes
+	--opsz: 9;
+	--wght: 1;
+	--GOOF: 1;
+	--WONK: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	font-variation-settings: "opsz" var(--opsz), "wght" var(--wght), "GOOF" var(--GOOF),
+		"WONK" var(--WONK);
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	background: var(--page-bg);
+	color: var(--page-text);
+}
+
+h1 {
+    font-family: Fraunces;
+    --wght: 1000;
+}
+
+p {
+	font-family: Fraunces;
+    --wght: 100;
+}
