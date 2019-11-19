@@ -1,8 +1,10 @@
 # Meta
-title: Fraunces
+title: Lorem
 description: >
-  Fraunces is not an Old Style typeface, but an “Old Style” typeface. That is, a genre of type that is less concerned with sensible construction of letterforms, and personality is always paramount.
+  Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 # Tech
 sass:
   sass_dir: _sass
+  style: compressed
+  sourcemap: never

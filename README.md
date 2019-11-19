@@ -1,8 +1,10 @@
-## Checklist
+## Checklist / getting started
 
--[ ] Configure the site in `_config.yml`.
--[ ] Add/edit font related data in the files in the `_data` directory.
--[ ] In JavaScript, respond to fail/success of loading the font in the `FontFaceObserver` code.
+- Configure the site in `_config.yml`.
+- Add/edit font related data in the files in the `_data` directory.
+- In JavaScript, respond to fail/success of loading the font in the `FontFaceObserver` code.
+- In HTML/CSS, use the `.variable-support` element to commuicate when variable fonts aren't supported.
+- Add `.animates` class to all elements that animate (and need to pause when outside viewport).
 
 ## Components
 
@@ -18,6 +20,6 @@ To get axes sliders and a element of text that responds to those, put an `.inter
 
 ### Animation
 
-Any element that animates should get an `animates` class. When this element is not in view, animations will be paused to avoid unnecessary performance impact. When in view, element will get `.in-view` class added.
+Any element that animates should get an `animates` class. When this element is not in view, animations will be paused to avoid unnecessary performance impact. When in view, element will get `.in-view` class added. Make sure you actually toggle `animation-play-state` yourself when the class is present/absent.
 
 Note: this can be repurposed for lazy loading images, pausing video, etc.
