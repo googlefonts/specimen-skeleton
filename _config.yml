@@ -1,63 +1,8 @@
 # Meta
 title: Fraunces
 description: >
-    Fraunces is not an Old Style typeface, but an “Old Style” typeface. That is, a genre of type that is less concerned with sensible construction of letterforms, and personality is always paramount.
+  Fraunces is not an Old Style typeface, but an “Old Style” typeface. That is, a genre of type that is less concerned with sensible construction of letterforms, and personality is always paramount.
 
 # Tech
 sass:
-    sass_dir: _sass
-
-# Font
-chars:
-    - a
-    - b
-    - c
-    - d
-    - e
-    - f
-    - g
-    - h
-    - i
-    - j
-    - k
-    - l
-    - m
-    - n
-    - o
-    - p
-    - q
-    - r
-    - s
-    - t
-    - u
-    - v
-    - w
-    - x
-    - y
-    - z
-    - A
-    - B
-    - C
-    - D
-    - E
-    - F
-    - G
-    - H
-    - I
-    - J
-    - K
-    - L
-    - M
-    - N
-    - O
-    - P
-    - Q
-    - R
-    - S
-    - T
-    - U
-    - V
-    - W
-    - X
-    - Y
-    - Z
+  sass_dir: _sass

@@ -1,0 +1,24 @@
+<div class="interactive-controls">
+	<ul class="interactive-controls-sliders">
+		{% for axis in site.data.axes %}
+		<li>
+			<label>{{ axis.name }}</label>
+			<input
+				type="range"
+				min="{{ axis.min }}"
+				max="{{ axis.max }}"
+				value="{{ axis.default }}"
+				name="{{ axis.axis }}"
+			/>
+		</li>
+		{% endfor %}
+	</ul>
+
+	<div class="interactive-controls-text">
+		<h1>Lorem</h1>
+		<p>
+			Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+			magna aliqua.
+		</p>
+	</div>
+</div>

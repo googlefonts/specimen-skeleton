@@ -1,0 +1,11 @@
+- axis: wght
+  name: Weight
+  min: 100
+  max: 900
+  default: 400
+
+- axis: abcd
+  name: Test
+  min: 1
+  max: 1000
+  default: 900

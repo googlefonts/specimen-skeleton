@@ -51,12 +51,12 @@ body {
 	color: var(--page-text);
 }
 
-h1 {
-	font-family: Fraunces;
-	--wght: 1000;
+ol,
+ul {
+	list-style-type: none;
+	padding: 0;
 }
 
-p {
+body {
 	font-family: Fraunces;
-	--wght: 100;
 }
