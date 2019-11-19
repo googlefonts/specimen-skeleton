@@ -1,0 +1,7 @@
+.animates {
+    transition: background 1s; // To show effect of adding .in-view class
+}
+
+.animates.in-view {
+    background: hotpink;
+}

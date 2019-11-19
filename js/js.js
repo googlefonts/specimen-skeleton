@@ -28,3 +28,16 @@ for (const interactive of interactives) {
 		slider.oninput = e => varset(e.target);
 	}
 }
+
+// Pause animations when element is not in viewport
+const obs = new IntersectionObserver(els => {
+	els.forEach(el => {
+		el.intersectionRatio > 0 ? el.target.classList.add("in-view") : el.target.classList.remove("in-view");
+	});
+});
+if ("IntersectionObserver" in window) {
+	const elements = document.querySelectorAll(".animates");
+	elements.forEach(el => {
+		obs.observe(el);
+	});
+}
