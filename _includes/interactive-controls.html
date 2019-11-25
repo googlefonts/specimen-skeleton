@@ -9,6 +9,7 @@
 				max="{{ axis.max }}"
 				value="{{ axis.default }}"
 				name="{{ axis.axis }}"
+				step="{{ axis.step | default: 0.1 }}"
 			/>
 		</li>
 		{% endfor %}
