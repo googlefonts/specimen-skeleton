@@ -1,0 +1,12 @@
+- name: Test Instance 1
+  axes:
+    wght: 100
+    opsz: 10
+    GOOF: 10
+    WONK: 0
+- name: Test Instance 2
+  axes:
+    wght: 200
+    opsz: 20
+    WONK: 20
+    GOOF: 1

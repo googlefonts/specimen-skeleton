@@ -36,16 +36,34 @@ font.load(null, fontTimeOut).then(
 const interactives = document.querySelectorAll(".interactive-controls");
 for (const interactive of interactives) {
 	const area = interactive.querySelector(".interactive-controls-text");
+	const sliders = interactive.querySelectorAll(".interactive-controls-slider");
+	const instances = interactive.querySelector(".interactive-controls-instances");
 
-	const varset = el => {
-		area.style.setProperty("--" + el.name, el.value);
+	const varset = (name, value) => {
+		area.style.setProperty(`--${name}`, value);
 	};
 
-	const sliders = interactive.querySelectorAll("input[type=range]");
 	for (const slider of sliders) {
-		varset(slider);
-		slider.oninput = e => varset(e.target);
+		// Apply initial axis value to text area
+		varset(slider.name, slider.value);
+		slider.oninput = e => {
+			// Set new axis value to text area
+			varset(e.target.name, e.target.value);
+			// Unselect named instance dropdown
+			// Optionally, see if current axes match instance and select that
+			instances.selectedIndex = -1;
+		};
 	}
+
+	instances.onchange = e => {
+		const axes = JSON.parse(e.target.options[e.target.selectedIndex].value);
+		for (const axis in axes) {
+			// Set new axis value on slider
+			interactive.querySelector(`[name=${axis}]`).value = axes[axis];
+			// Apply new axis value to text area
+			varset(axis, axes[axis]);
+		}
+	};
 }
 
 // Pause animations when element is not in viewport

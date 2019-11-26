@@ -10,10 +10,17 @@
 				value="{{ axis.default }}"
 				name="{{ axis.axis }}"
 				step="{{ axis.step | default: 0.1 }}"
+				class="interactive-controls-slider"
 			/>
 		</li>
 		{% endfor %}
 	</ul>
+
+	<select class="interactive-controls-instances">
+		{% for instance in site.data.instances %}
+		<option value='{{ instance.axes | jsonify }}'>{{ instance.name }}</option>
+		{% endfor %}
+	</select>
 
 	<div class="interactive-controls-text">
 		<h1>Lorem</h1>
