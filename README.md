@@ -6,6 +6,12 @@
 - In HTML/CSS, use the `.variable-support` element to commuicate when variable fonts aren't supported.
 - Add `.animates` class to all elements that animate (and need to pause when outside viewport).
 
+## Development
+
+1. Make sure the [required Ruby version](./.ruby-version) is installed on your system.
+2. Run `bundle install` from the root of the repository.
+3. Run `bundle exec jekyll serve` from the root of the repository to start a local development server.
+
 ## Components
 
 The boilerplate has some basic components you can base your specimen site on:
