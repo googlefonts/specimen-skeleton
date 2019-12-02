@@ -5,17 +5,17 @@
 // Fonts stuff
 //
 // This will be replaced by calls to the Google Fonts API
-// @font-face {
-// 	font-family: Fraunces;
-// 	src: url("../fonts/Fraunces_GoofyAxis-VF.ttf");
-// 	font-weight: 1 1000;
-// }
+@font-face {
+    font-family: Fraunces;
+    // src: url("../fonts/Fraunces_GoofyAxis-VF.ttf");
+    font-weight: 1 1000;
+}
 
-// @font-face {
-// 	font-family: Fraunces;
-// 	src: url("../fonts/FrauncesItalic_GoofyAxis-VF.ttf");
-// 	font-style: italic;
-// }
+@font-face {
+    font-family: Fraunces;
+    // src: url("../fonts/FrauncesItalic_GoofyAxis-VF.ttf");
+    font-style: italic;
+}
 
 // Variable font support
 .variable-support {
@@ -63,5 +63,5 @@ ul {
 }
 
 body {
-    font-family: Fraunces;
+    font-family: Fraunces; // stylelint-disable-line font-family-no-missing-generic-family-keyword
 }
