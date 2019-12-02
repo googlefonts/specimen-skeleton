@@ -19,7 +19,8 @@
     "test": "run-s lint"
   },
   "browserslist": [
-    "defaults"
+    "> 1%, last 2 versions, Firefox ESR, not dead",
+    "not ie > 1, not ie_mob > 1"
   ],
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
