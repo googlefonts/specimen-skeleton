@@ -26,4 +26,6 @@ module.exports = eleventyConfig => {
     "webpackAssetContents",
     webpackAssetContents
   );
+
+  eleventyConfig.addFilter("json_stringify", JSON.stringify);
 };

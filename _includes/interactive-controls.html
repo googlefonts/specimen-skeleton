@@ -18,7 +18,9 @@
 
   <select class="interactive-controls-instances">
     {% for instance in instances %}
-    <option value="{{ instance.axes | jsonify }}">{{ instance.name }}</option>
+    <option value="{{ instance.axes | json_stringify | escape }}"
+      >{{ instance.name }}</option
+    >
     {% endfor %}
   </select>
 
