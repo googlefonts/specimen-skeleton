@@ -1,5 +1,5 @@
 module.exports = {
-  extends: "stylelint-config-standard",
+  extends: ["stylelint-config-standard", "stylelint-config-prettier"],
   plugins: ["stylelint-no-unsupported-browser-features"],
   rules: {
     indentation: 4,
