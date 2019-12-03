@@ -19,8 +19,13 @@
     "test": "run-s lint"
   },
   "browserslist": [
-    "> 1%, last 2 versions, Firefox ESR, not dead",
-    "not ie > 1, not ie_mob > 1"
+    "edge >= 17",
+    "firefox >= 62",
+    "chrome >= 66",
+    "safari >= 11",
+    "opera >= 53",
+    "ios_saf >= 11.2",
+    "samsung >= 8.2"
   ],
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
