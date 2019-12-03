@@ -74,5 +74,8 @@
   },
   "dependencies": {
     "fontfaceobserver": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=12"
   }
 }
