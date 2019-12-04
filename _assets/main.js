@@ -58,19 +58,23 @@ for (const interactive of interactives) {
       varset(e.target.name, e.target.value);
       // Unselect named instance dropdown
       // Optionally, see if current axes match instance and select that
-      instances.selectedIndex = -1;
+      if (instances) {
+        instances.selectedIndex = -1;
+      }
     };
   }
 
-  instances.onchange = e => {
-    const axes = JSON.parse(e.target.options[e.target.selectedIndex].value);
-    for (const axis in axes) {
-      // Set new axis value on slider
-      interactive.querySelector(`[name=${axis}]`).value = axes[axis];
-      // Apply new axis value to text area
-      varset(axis, axes[axis]);
-    }
-  };
+  if (instances) {
+    instances.onchange = e => {
+      const axes = JSON.parse(e.target.options[e.target.selectedIndex].value);
+      for (const axis in axes) {
+        // Set new axis value on slider
+        interactive.querySelector(`[name=${axis}]`).value = axes[axis];
+        // Apply new axis value to text area
+        varset(axis, axes[axis]);
+      }
+    };
+  }
 }
 
 if ("IntersectionObserver" in window) {
