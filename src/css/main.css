@@ -8,15 +8,7 @@ This will be replaced by calls to the Google Fonts API */
 @font-face {
 	font-family: Fraunces;
 	font-weight: 1 1000;
-
-	/* src: url("../fonts/Fraunces_GoofyAxis-VF.ttf"); */
-}
-
-@font-face {
-	font-family: Fraunces;
-	font-style: italic;
-
-	/* src: url("../fonts/FrauncesItalic_GoofyAxis-VF.ttf"); */
+	src: url("../fonts/example-font-file.woff2");
 }
 
 /* Variable font support */
