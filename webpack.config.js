@@ -74,7 +74,7 @@ module.exports = {
 			}
 		]
 	},
-	devtool: isProd ? "source-map" : "eval",
+	devtool: isProd ? false : "eval",
 	optimization,
 	plugins: [
 		new MiniCssExtractPlugin({
