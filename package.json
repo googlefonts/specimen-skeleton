@@ -13,7 +13,7 @@
 		"start:webpack": "webpack -w",
 		"start:eleventy": "eleventy --serve",
 		"prettier": "prettier '{src/**/*.{js,css,json,html},*.js,*.json,*.html}'",
-		"stylelint": "stylelint 'src/_assets/css/**/*.css'",
+		"stylelint": "stylelint 'src/css/**/*.css'",
 		"eslint": "eslint src/",
 		"lint": "run-s 'prettier --check' eslint stylelint",
 		"test": "run-s lint"
