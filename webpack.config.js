@@ -22,8 +22,7 @@ const chunkFileNamePattern = isProd ? "[id].[hash]" : "[id]";
 module.exports = {
 	mode: isProd ? "production" : "development",
 	entry: {
-		main: path.resolve(__dirname, "_assets", "main.js"),
-		styles: path.resolve(__dirname, "_assets", "css", "main.css")
+		main: path.resolve(__dirname, "_assets", "main.js")
 	},
 	output: {
 		path: out,

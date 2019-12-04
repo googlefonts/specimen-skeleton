@@ -9,7 +9,15 @@ const webpackAsset = async name => {
 		path.resolve(__dirname, "_includes", ".webpack", "manifest.json")
 	);
 	const manifest = JSON.parse(manifestData);
-	return manifest[name];
+
+	const assetPath = manifest[name];
+	if (assetPath == null) {
+		throw new Error(
+			`Unknown Webpack asset requested: ${name}. Check .webpack/manifest.json.`
+		);
+	}
+
+	return assetPath;
 };
 
 const webpackAssetContents = async name => {
