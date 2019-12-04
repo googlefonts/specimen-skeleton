@@ -15,7 +15,7 @@
     "prettier": "prettier '{_assets/**/*.{js,scss},_data/**/*.{js,json},*.js,*.html,_includes/**/*.html}'",
     "stylelint": "stylelint '_assets/scss/**/*.scss'",
     "eslint": "eslint _assets/ _data/",
-    "lint": "run-s eslint stylelint",
+    "lint": "run-s 'prettier --check' eslint stylelint",
     "test": "run-s lint"
   },
   "browserslist": [
