@@ -1,32 +1,34 @@
 <div class="interactive-controls">
-	<ul class="interactive-controls-sliders">
-		{% for axis in site.data.axes %}
-		<li>
-			<label>{{ axis.name }}</label>
-			<input
-				type="range"
-				min="{{ axis.min }}"
-				max="{{ axis.max }}"
-				value="{{ axis.default }}"
-				name="{{ axis.axis }}"
-				step="{{ axis.step | default: 0.1 }}"
-				class="interactive-controls-slider"
-			/>
-		</li>
-		{% endfor %}
-	</ul>
+  <ul class="interactive-controls-sliders">
+    {% for axis in axes %}
+    <li>
+      <label>{{ axis.name }}</label>
+      <input
+        type="range"
+        min="{{ axis.min }}"
+        max="{{ axis.max }}"
+        value="{{ axis.default }}"
+        name="{{ axis.axis }}"
+        step="{{ axis.step | default: 0.1 }}"
+        class="interactive-controls-slider"
+      />
+    </li>
+    {% endfor %}
+  </ul>
 
-	<select class="interactive-controls-instances">
-		{% for instance in site.data.instances %}
-		<option value='{{ instance.axes | jsonify }}'>{{ instance.name }}</option>
-		{% endfor %}
-	</select>
+  <select class="interactive-controls-instances">
+    {% for instance in instances %}
+    <option value="{{ instance.axes | json_stringify | escape }}"
+      >{{ instance.name }}</option
+    >
+    {% endfor %}
+  </select>
 
-	<div class="interactive-controls-text">
-		<h1>Lorem</h1>
-		<p>
-			Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-			magna aliqua.
-		</p>
-	</div>
+  <div class="interactive-controls-text">
+    <h1>Lorem</h1>
+    <p>
+      Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      incididunt ut labore et dolore magna aliqua.
+    </p>
+  </div>
 </div>

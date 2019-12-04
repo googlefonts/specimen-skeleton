@@ -1,0 +1,20 @@
+.animates {
+    transition: background 1s; // To show effect of adding .in-view class
+    animation: example-animation 4s infinite alternate;
+    animation-play-state: paused;
+}
+
+.animates.in-view {
+    background: black;
+    animation-play-state: running;
+}
+
+@keyframes example-animation {
+    from {
+        color: red;
+    }
+
+    to {
+        color: lime;
+    }
+}

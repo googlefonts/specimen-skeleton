@@ -1,6 +1,17 @@
+## Project setup & development
+
+This project requires Node.js >= 12 and [yarn](https://yarnpkg.com/).
+
+To get started, run the following commands from the root of the repo:
+
+- `yarn install`
+- `yarn start` - this will start the local development server, view at http://localhost:8080.
+
+The site will [automatically](./.github/workflows/ci.yml) be re-built and deployed on Github Pages every time the master branch is updated.
+
 ## Checklist / getting started
 
-- Configure the site in `_config.yml`.
+- Configure the site in `_data/site.js`.
 - Add/edit font related data in the files in the `_data` directory.
 - In JavaScript, respond to fail/success of loading the font in the `FontFaceObserver` code.
 - In HTML/CSS, use the `.variable-support` element to commuicate when variable fonts aren't supported.
