@@ -1,5 +1,5 @@
 .animates {
-	transition: background 1s; // To show effect of adding .in-view class
+	transition: background 1s; /* To show effect of adding .in-view class */
 	animation: example-animation 4s infinite alternate;
 	animation-play-state: paused;
 }

@@ -19,18 +19,10 @@ const optimization = {
 const filenamePattern = name => (isProd ? `${name}.[hash]` : name);
 const chunkFileNamePattern = isProd ? "[id].[hash]" : "[id]";
 
-const postcssLoader = {
-	loader: "postcss-loader",
-	options: {
-		plugins: () => [require("autoprefixer")]
-	}
-};
-
 module.exports = {
 	mode: isProd ? "production" : "development",
 	entry: {
-		main: path.resolve(__dirname, "_assets", "main.js"),
-		styles: path.resolve(__dirname, "_assets", "scss", "main.scss")
+		main: path.resolve(__dirname, "_assets", "main.js")
 	},
 	output: {
 		path: out,
@@ -50,15 +42,14 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.scss$/,
+				test: /\.css$/,
 				exclude: exclusions,
 				use: [
 					{
 						loader: MiniCssExtractPlugin.loader
 					},
 					"css-loader",
-					postcssLoader,
-					"sass-loader"
+					"postcss-loader"
 				]
 			},
 			{

@@ -1,23 +1,25 @@
-@import "./animation";
-@import "./character-grid";
-@import "./interactive-controls";
+@import "./_animation.css";
+@import "./_character-grid.css";
+@import "./_interactive-controls.css";
 
-// Fonts stuff
-//
-// This will be replaced by calls to the Google Fonts API
+/* Fonts stuff
+
+This will be replaced by calls to the Google Fonts API */
 @font-face {
 	font-family: Fraunces;
-	// src: url("../fonts/Fraunces_GoofyAxis-VF.ttf");
 	font-weight: 1 1000;
+
+	/* src: url("../fonts/Fraunces_GoofyAxis-VF.ttf"); */
 }
 
 @font-face {
 	font-family: Fraunces;
-	// src: url("../fonts/FrauncesItalic_GoofyAxis-VF.ttf");
 	font-style: italic;
+
+	/* src: url("../fonts/FrauncesItalic_GoofyAxis-VF.ttf"); */
 }
 
-// Variable font support
+/* Variable font support */
 .variable-support {
 	display: block;
 }
@@ -28,12 +30,12 @@
 	}
 }
 
-// Setup
+/* Setup */
 :root {
 	--page-bg: #fff;
 	--page-text: #000;
 
-	// Font axes
+	/* Font axes */
 	--opsz: 9;
 	--wght: 1;
 	--GOOF: 1;
@@ -63,5 +65,5 @@ ul {
 }
 
 body {
-	font-family: Fraunces; // stylelint-disable-line font-family-no-missing-generic-family-keyword
+	font-family: Fraunces; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
 }
