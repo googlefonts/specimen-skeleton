@@ -11,8 +11,8 @@ The site will [automatically](./.github/workflows/ci.yml) be re-built and deploy
 
 ## Checklist / getting started
 
-- Configure the site in `_data/site.js`.
-- Add/edit font related data in the files in the `_data` directory.
+- Configure the site in `src/_data/site.js`.
+- Add/edit font related data in the files in the `src/_data` directory.
 - In JavaScript, respond to fail/success of loading the font in the `FontFaceObserver` code.
 - In HTML/CSS, use the `.variable-support` element to commuicate when variable fonts aren't supported.
 - Add `.animates` class to all elements that animate (and need to pause when outside viewport).
