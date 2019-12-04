@@ -12,9 +12,9 @@
 		"start": "cross-env NODE_ENV=development ELEVENTY_ENV=development npm-run-all clean build:webpack --parallel start:*",
 		"start:webpack": "webpack -w",
 		"start:eleventy": "eleventy --serve",
-		"prettier": "prettier '{_assets/**/*.{js,css},_data/**/*.{js,json},*.js,*.json,*.html,_includes/**/*.html}'",
-		"stylelint": "stylelint '_assets/css/**/*.css'",
-		"eslint": "eslint _assets/ _data/",
+		"prettier": "prettier '{src/**/*.{js,css,json,html},*.js,*.json,*.html}'",
+		"stylelint": "stylelint 'src/css/**/*.css'",
+		"eslint": "eslint src/",
 		"lint": "run-s 'prettier --check' eslint stylelint",
 		"test": "run-s lint"
 	},

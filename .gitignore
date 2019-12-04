@@ -1,5 +1,5 @@
 .DS_Store
 _site/
 node_modules/
-_includes/.webpack
+src/_includes/.webpack
 fonts/

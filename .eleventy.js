@@ -4,9 +4,11 @@ const util = require("util");
 const readFile = util.promisify(fs.readFile);
 const htmlmin = require("html-minifier");
 
+const inputDir = path.resolve(__dirname, "./src");
+
 const webpackAsset = async name => {
 	const manifestData = await readFile(
-		path.resolve(__dirname, "_includes", ".webpack", "manifest.json")
+		path.resolve(inputDir, "_includes", ".webpack", "manifest.json")
 	);
 	const manifest = JSON.parse(manifestData);
 
@@ -52,4 +54,11 @@ module.exports = eleventyConfig => {
 			return content;
 		});
 	}
+
+	return {
+		dir: {
+			input: "./src",
+			layouts: "_layouts"
+		}
+	};
 };
