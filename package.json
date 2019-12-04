@@ -12,8 +12,8 @@
 		"start": "cross-env NODE_ENV=development ELEVENTY_ENV=development npm-run-all clean build:webpack --parallel start:*",
 		"start:webpack": "webpack -w",
 		"start:eleventy": "eleventy --serve",
-		"prettier": "prettier '{_assets/**/*.{js,scss},_data/**/*.{js,json},*.js,*.html,_includes/**/*.html}'",
-		"stylelint": "stylelint '_assets/scss/**/*.scss'",
+		"prettier": "prettier '{_assets/**/*.{js,css},_data/**/*.{js,json},*.js,*.json,*.html,_includes/**/*.html}'",
+		"stylelint": "stylelint '_assets/css/**/*.css'",
 		"eslint": "eslint _assets/ _data/",
 		"lint": "run-s 'prettier --check' eslint stylelint",
 		"test": "run-s lint"
@@ -35,6 +35,7 @@
 		"babel-loader": "^8.0.6",
 		"cross-env": "^6.0.3",
 		"css-loader": "^3.2.0",
+		"cssnano": "^4.1.10",
 		"eslint": "^6.7.2",
 		"eslint-plugin-compat": "^3.3.0",
 		"eslint-plugin-prettier": "^3.1.1",
@@ -43,13 +44,12 @@
 		"husky": "^3.1.0",
 		"lint-staged": "^9.5.0",
 		"mini-css-extract-plugin": "^0.8.0",
-		"node-sass": "^4.13.0",
 		"npm-run-all": "^4.1.5",
 		"postcss": "^7.0.23",
+		"postcss-import": "^12.0.1",
 		"postcss-loader": "^3.0.0",
 		"prettier": "^1.19.1",
 		"rimraf": "^3.0.0",
-		"sass-loader": "^8.0.0",
 		"stylelint": "^12.0.0",
 		"stylelint-config-prettier": "^7.0.0",
 		"stylelint-config-standard": "^19.0.0",
@@ -60,11 +60,11 @@
 		"webpack-manifest-plugin": "^2.2.0"
 	},
 	"lint-staged": {
-		"*.{js,json,html,scss}": [
+		"*.{js,json,html,css}": [
 			"prettier --write",
 			"git add"
 		],
-		"*.scss": [
+		"*.css": [
 			"stylelint"
 		]
 	},
