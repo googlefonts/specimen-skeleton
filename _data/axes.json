@@ -1,31 +1,31 @@
 [
-  {
-    "axis": "wght",
-    "name": "Weight",
-    "min": 0,
-    "max": 1000,
-    "default": 0
-  },
-  {
-    "axis": "opsz",
-    "name": "Optical Size",
-    "min": 9,
-    "max": 144,
-    "default": 9
-  },
-  {
-    "axis": "GOOF",
-    "name": "Goofy",
-    "min": 0,
-    "max": 100,
-    "default": 0
-  },
-  {
-    "axis": "WONK",
-    "name": "Wonk",
-    "min": 0,
-    "max": 1,
-    "default": 0.5,
-    "step": 1
-  }
+	{
+		"axis": "wght",
+		"name": "Weight",
+		"min": 0,
+		"max": 1000,
+		"default": 0
+	},
+	{
+		"axis": "opsz",
+		"name": "Optical Size",
+		"min": 9,
+		"max": 144,
+		"default": 9
+	},
+	{
+		"axis": "GOOF",
+		"name": "Goofy",
+		"min": 0,
+		"max": 100,
+		"default": 0
+	},
+	{
+		"axis": "WONK",
+		"name": "Wonk",
+		"min": 0,
+		"max": 1,
+		"default": 0.5,
+		"step": 1
+	}
 ]

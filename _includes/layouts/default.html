@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    {% comment %} Once we load from Google Fonts API:
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    {% endcomment %}
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="{{ site.description }}" />
-    <title>
-      {{ site.title or renderData.title or title or metadata.title }}
-    </title>
-    <link rel="stylesheet" href="{% webpackAsset 'styles.css' %}" />
-  </head>
+	<head>
+		{% comment %} Once we load from Google Fonts API:
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		{% endcomment %}
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="description" content="{{ site.description }}" />
+		<title>
+			{{ site.title or renderData.title or title or metadata.title }}
+		</title>
+		<link rel="stylesheet" href="{% webpackAsset 'styles.css' %}" />
+	</head>
 
-  <body>
-    {{ content }}
-    <script src="{% webpackAsset 'main.js' %}"></script>
-  </body>
+	<body>
+		{{ content }}
+		<script src="{% webpackAsset 'main.js' %}"></script>
+	</body>
 </html>
