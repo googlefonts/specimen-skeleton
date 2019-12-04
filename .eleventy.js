@@ -57,7 +57,8 @@ module.exports = eleventyConfig => {
 
 	return {
 		dir: {
-			input: inputDir
+			input: inputDir,
+			layouts: "_layouts"
 		}
 	};
 };
