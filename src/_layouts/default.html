@@ -12,10 +12,10 @@
 			{{ site.title or renderData.title or title or metadata.title }}
 		</title>
 		<link rel="stylesheet" href="{% webpackAsset 'main.css' %}" />
+		<script defer src="{% webpackAsset 'main.js' %}"></script>
 	</head>
 
 	<body>
 		{{ content }}
-		<script src="{% webpackAsset 'main.js' %}"></script>
 	</body>
 </html>
