@@ -16,8 +16,9 @@ const optimization = {
 	noEmitOnErrors: !isProd
 };
 
-const filenamePattern = name => (isProd ? `${name}.[hash]` : name);
-const chunkFileNamePattern = isProd ? "[id].[hash]" : "[id]";
+const fileLoaderOptions = {
+	name: "[name].[hash].[ext]"
+};
 
 module.exports = {
 	mode: isProd ? "production" : "development",
@@ -26,7 +27,7 @@ module.exports = {
 	},
 	output: {
 		path: out,
-		filename: `${filenamePattern("[name]")}.js`,
+		filename: "[name].[hash].js",
 		publicPath: "./"
 	},
 	module: {
@@ -56,7 +57,8 @@ module.exports = {
 				include: path.resolve(__dirname, "src", "fonts"),
 				use: [
 					{
-						loader: "file-loader"
+						loader: "file-loader",
+						options: fileLoaderOptions
 					}
 				]
 			},
@@ -65,12 +67,14 @@ module.exports = {
 				oneOf: [
 					{
 						resourceQuery: /external/,
-						use: "file-loader"
+						loader: "file-loader",
+						options: fileLoaderOptions
 					},
 					{
 						loader: "url-loader",
 						options: {
-							limit: 8192
+							limit: 8192,
+							...fileLoaderOptions
 						}
 					}
 				]
@@ -81,8 +85,7 @@ module.exports = {
 	optimization,
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: `${filenamePattern("styles")}.css`,
-			chunkFilename: `${chunkFileNamePattern}.css`,
+			filename: "styles.[contenthash].css",
 			ignoreOrder: false
 		}),
 		new ManifestPlugin({
