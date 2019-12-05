@@ -11,15 +11,11 @@
 		<title>
 			{{ site.title or renderData.title or title or metadata.title }}
 		</title>
-		<style>
-			{% webpackAssetContents 'main.css' %}
-		</style>
+		<link rel="stylesheet" href="{% webpackAsset 'main.css' %}" />
 	</head>
 
 	<body>
 		{{ content }}
-		<script>
-			{% webpackAssetContents 'main.js' %}
-		</script>
+		<script src="{% webpackAsset 'main.js' %}"></script>
 	</body>
 </html>
