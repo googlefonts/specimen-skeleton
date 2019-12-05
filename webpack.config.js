@@ -53,8 +53,20 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(png|jpg|svg|woff|woff2|ttf|eot)$/i,
+				include: path.resolve(__dirname, "src", "fonts"),
 				use: [
+					{
+						loader: "file-loader"
+					}
+				]
+			},
+			{
+				test: /\.(png|jpg|svg)$/i,
+				oneOf: [
+					{
+						resourceQuery: /external/,
+						use: "file-loader"
+					},
 					{
 						loader: "url-loader",
 						options: {
