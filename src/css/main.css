@@ -6,7 +6,7 @@
 
 This will be replaced by calls to the Google Fonts API */
 @font-face {
-	font-family: Fraunces;
+	font-family: example-font;
 	font-weight: 1 1000;
 	src: url("../fonts/example-font-file.woff2");
 }
