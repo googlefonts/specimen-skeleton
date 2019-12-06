@@ -71,6 +71,14 @@ module.exports = {
 						options: fileLoaderOptions
 					},
 					{
+						resourceQuery: /inline/,
+						loader: "url-loader",
+						options: {
+							limit: true,
+							...fileLoaderOptions
+						}
+					},
+					{
 						loader: "url-loader",
 						options: {
 							limit: 8192,
