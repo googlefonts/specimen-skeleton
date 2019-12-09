@@ -49,5 +49,5 @@ ul {
 }
 
 body {
-	font-family: Fraunces; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
+	font-family: example-font; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
 }
