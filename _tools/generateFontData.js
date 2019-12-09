@@ -3,7 +3,12 @@ const util = require("util");
 const path = require("path");
 const fontKit = require("fontkit");
 
-const writeFile = util.promisify(fs.writeFile);
+const _writeFile = util.promisify(fs.writeFile);
+const writeFile = (path, contents) => {
+	console.info("Writing", path);
+	return _writeFile(path, contents);
+};
+
 const loadFont = util.promisify(fontKit.open);
 
 const dataDirectory = path.resolve(__dirname, "../", "src", "_data");
