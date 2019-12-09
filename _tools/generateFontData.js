@@ -15,7 +15,7 @@ const writeDataFile = async (filename, data) => {
 	return writeFile(dataFilePath, fileContents);
 };
 
-const writeAxes = font => {
+const buildAxes = font => {
 	return Object.entries(font.variationAxes).map(([axis, data]) => ({
 		axis: axis,
 		name: data.name,
@@ -25,11 +25,11 @@ const writeAxes = font => {
 	}));
 };
 
-const writeChars = font => {
+const buildChars = font => {
 	return font.characterSet.map(code => `&#${code};`);
 };
 
-const writeInstances = font => {
+const buildInstances = font => {
 	return Object.entries(font.namedVariations).map(([name, axes]) => ({
 		name,
 		axes
@@ -39,9 +39,9 @@ const writeInstances = font => {
 const parseFontFile = async path => {
 	const font = await loadFont(path);
 	return {
-		axes: writeAxes(font),
-		charset: writeChars(font),
-		instances: writeInstances(font)
+		axes: buildAxes(font),
+		charset: buildChars(font),
+		instances: buildInstances(font)
 	};
 };
 
