@@ -7,6 +7,13 @@ const writeFile = util.promisify(fs.writeFile);
 const loadFont = util.promisify(fontKit.open);
 
 const dataDirectory = path.resolve(__dirname, "../", "src", "_data");
+const fontFaceCssPath = path.resolve(
+	__dirname,
+	"../",
+	"src",
+	"css",
+	"_font-faces.css"
+);
 
 const writeDataFile = async (filename, data) => {
 	const dataFilePath = path.join(dataDirectory, filename);
@@ -39,13 +46,16 @@ const buildInstances = font => {
 const parseFontFile = async path => {
 	const font = await loadFont(path);
 	return {
-		axes: buildAxes(font),
-		charset: buildChars(font),
-		instances: buildInstances(font)
+		name: font.postscriptName,
+		data: {
+			axes: buildAxes(font),
+			charset: buildChars(font),
+			instances: buildInstances(font)
+		}
 	};
 };
 
-const writeDataFiles = fontData => {
+const writeDataFiles = async fontData => {
 	const promises = Object.entries(fontData).map(([type, data]) => {
 		return writeDataFile(`${type}.json`, data);
 	});
@@ -53,10 +63,31 @@ const writeDataFiles = fontData => {
 	return Promise.all(promises);
 };
 
+const writeCssFontFace = async (fontData, fontFilePath) => {
+	const fontWeight = fontData.data.axes.find(({ axis }) => axis == "wght");
+
+	const fontUrl = path.relative(path.dirname(fontFaceCssPath), fontFilePath);
+	const min = Math.max(fontWeight.min, 1);
+	const max = fontWeight.max;
+
+	const fontFace = `@font-face {
+  font-family: ${fontData.name};
+  font-weight: ${min} ${max};
+  src: url("${fontUrl}");
+}`;
+
+	return writeFile(fontFaceCssPath, fontFace);
+};
+
 const main = async () => {
 	try {
-		const data = await parseFontFile(process.argv[2]);
-		await writeDataFiles(data);
+		const fontFilePath = process.argv[2];
+		const fontData = await parseFontFile(fontFilePath);
+
+		await Promise.all([
+			writeDataFiles(fontData.data),
+			writeCssFontFace(fontData, fontFilePath)
+		]);
 	} catch (e) {
 		console.error("Failed to generate font data.", e);
 		process.exit(1);
