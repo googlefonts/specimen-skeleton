@@ -68,19 +68,58 @@ const writeDataFiles = async fontData => {
 	return Promise.all(promises);
 };
 
-const writeCssFontFace = async (fontData, fontFilePath) => {
-	const fontWeight = fontData.data.axes.find(({ axis }) => axis == "wght");
+/**
+ * Generates a css declaration based on a font axis.
+ * @param {object} fontData
+ * @param {string} property - css property to generate
+ * @param {string} axisName - name of the font axis
+ *
+ * @example axisRangeDeclaration(fontData, "font-weight", "wght");
+ * // returns "font-weight: 1 500;" (depending on actual range of font)
+ */
+const axisRangeDeclaration = (fontData, property, axisName) => {
+	const axis = fontData.data.axes.find(({ axis }) => axis == axisName);
 
+	const declaration = axis => {
+		const min = Math.max(axis.min, 1); // 0 is not valid in css in this context
+		const max = axis.max;
+
+		return `${property}: ${min} ${max};`;
+	};
+
+	return axis ? declaration(axis) : null;
+};
+
+/**
+ * Generates a CSS @font-face declaration for the provided font file.
+ *
+ * Includes:
+ * - font-familiy
+ * - font-weight (if font has a wght axis)
+ * - font-stretch (if font has wdth axis)
+ * - src
+ * @param {object} fontData
+ * @param {string} fontFilePath
+ */
+const buildCssFontFace = (fontData, fontFilePath) => {
 	const fontUrl = path.relative(path.dirname(fontFaceCssPath), fontFilePath);
-	const min = Math.max(fontWeight.min, 1);
-	const max = fontWeight.max;
 
-	const fontFace = `@font-face {
-  font-family: ${fontData.name};
-  font-weight: ${min} ${max};
-  src: url("${fontUrl}");
-}`;
+	const declarations =
+		[
+			`font-family: ${fontData.name};`,
+			axisRangeDeclaration(fontData, "font-weight", "wght"),
+			axisRangeDeclaration(fontData, "font-stretch", "wdth"),
+			`src: url("${fontUrl}");`
+		]
+			.filter(d => d != null)
+			.map(d => `  ${d}`)
+			.join("\n") + "\n";
 
+	return `@font-face {\n${declarations}}`;
+};
+
+const writeCssFontFace = async (fontData, fontFilePath) => {
+	const fontFace = buildCssFontFace(fontData, fontFilePath);
 	return writeFile(fontFaceCssPath, fontFace);
 };
 
@@ -100,6 +139,7 @@ const main = async () => {
 };
 
 module.exports.parseFontFile = parseFontFile;
+module.exports.buildCssFontFace = buildCssFontFace;
 
 if (require.main === module) {
 	main();
