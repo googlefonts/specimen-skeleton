@@ -1,7 +1,12 @@
 const fs = require("fs");
 const util = require("util");
 const path = require("path");
-const fontKit = require("fontkit");
+const loadFont = util.promisify(require("fontkit").open);
+
+const srcDirectory = path.resolve(__dirname, "../", "src");
+const fontsDirectory = path.resolve(srcDirectory, "fonts");
+const dataDirectory = path.resolve(srcDirectory, "_data");
+const fontFaceCssPath = path.resolve(srcDirectory, "css", "_font-faces.css");
 
 const assert = (condition, message) => {
 	if (!condition) {
@@ -14,13 +19,6 @@ const writeFile = (path, contents) => {
 	console.info("Writing", path);
 	return _writeFile(path, contents);
 };
-
-const loadFont = util.promisify(fontKit.open);
-
-const srcDirectory = path.resolve(__dirname, "../", "src");
-const fontsDirectory = path.resolve(srcDirectory, "fonts");
-const dataDirectory = path.resolve(srcDirectory, "_data");
-const fontFaceCssPath = path.resolve(srcDirectory, "css", "_font-faces.css");
 
 const writeDataFile = async (filename, data) => {
 	const dataFilePath = path.join(dataDirectory, filename);
@@ -146,10 +144,8 @@ const findFirstFontFile = async directory => {
 
 const main = async () => {
 	try {
-		const firstArg = process.argv[2];
-
-		const fontFilePath = await (firstArg ||
-			(await findFirstFontFile(fontsDirectory)));
+		const fontFilePath =
+			process.argv[2] || (await findFirstFontFile(fontsDirectory));
 		const fontData = await parseFontFile(fontFilePath);
 
 		await Promise.all([
