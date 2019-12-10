@@ -2,13 +2,14 @@
 	<ul class="interactive-controls-sliders">
 		{% for axis in axes %}
 		<li>
-			<label>{{ axis.name }}</label>
+			<label for="axis-{{ axis.axis }}">{{ axis.name }}</label>
 			<input
 				type="range"
 				min="{{ axis.min }}"
 				max="{{ axis.max }}"
 				value="{{ axis.default }}"
 				name="{{ axis.axis }}"
+				id="axis-{{ axis.axis }}"
 				step="{{ axis.step | default: 0.1 }}"
 				class="interactive-controls-slider"
 			/>
