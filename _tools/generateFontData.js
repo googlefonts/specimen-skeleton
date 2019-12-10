@@ -3,6 +3,12 @@ const util = require("util");
 const path = require("path");
 const fontKit = require("fontkit");
 
+const assert = (condition, message) => {
+	if (!condition) {
+		throw new Error(message);
+	}
+};
+
 const _writeFile = util.promisify(fs.writeFile);
 const writeFile = (path, contents) => {
 	console.info("Writing", path);
@@ -11,14 +17,10 @@ const writeFile = (path, contents) => {
 
 const loadFont = util.promisify(fontKit.open);
 
-const dataDirectory = path.resolve(__dirname, "../", "src", "_data");
-const fontFaceCssPath = path.resolve(
-	__dirname,
-	"../",
-	"src",
-	"css",
-	"_font-faces.css"
-);
+const srcDirectory = path.resolve(__dirname, "../", "src");
+const fontsDirectory = path.resolve(srcDirectory, "fonts");
+const dataDirectory = path.resolve(srcDirectory, "_data");
+const fontFaceCssPath = path.resolve(srcDirectory, "css", "_font-faces.css");
 
 const writeDataFile = async (filename, data) => {
 	const dataFilePath = path.join(dataDirectory, filename);
@@ -123,9 +125,31 @@ const writeCssFontFace = async (fontData, fontFilePath) => {
 	return writeFile(fontFaceCssPath, fontFace);
 };
 
+const findFirstFontFile = async directory => {
+	const fontFiles = await util.promisify(fs.readdir)(directory);
+
+	assert(
+		fontFiles.length > 0,
+		`No font file found. Place your font in ${path.relative(
+			process.cwd(),
+			directory
+		)}.`
+	);
+
+	assert(
+		fontFiles.length == 1,
+		"Multiple font files found. Please specify the path to your font file explicitly."
+	);
+
+	return path.resolve(fontsDirectory, fontFiles[0]);
+};
+
 const main = async () => {
 	try {
-		const fontFilePath = process.argv[2];
+		const firstArg = process.argv[2];
+
+		const fontFilePath = await (firstArg ||
+			(await findFirstFontFile(fontsDirectory)));
 		const fontData = await parseFontFile(fontFilePath);
 
 		await Promise.all([

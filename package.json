@@ -16,7 +16,8 @@
 		"stylelint": "stylelint 'src/css/**/*.css'",
 		"eslint": "eslint src/",
 		"lint": "run-s 'prettier --check' eslint stylelint",
-		"test": "run-s lint"
+		"test": "run-s lint",
+		"fontdata": "node _tools/generateFontData.js"
 	},
 	"browserslist": [
 		"edge >= 17",
