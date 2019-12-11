@@ -1,0 +1,5 @@
+@font-face {
+	font-family: example-font;
+	font-weight: 1 1000;
+	src: url("../fonts/example-font-file.woff2");
+}

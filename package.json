@@ -16,7 +16,8 @@
 		"stylelint": "stylelint 'src/css/**/*.css'",
 		"eslint": "eslint src/",
 		"lint": "run-s 'prettier --check' eslint stylelint",
-		"test": "run-s lint"
+		"test": "run-s lint",
+		"fontdata": "node _tools/generateFontData.js"
 	},
 	"browserslist": [
 		"edge >= 17",
@@ -50,6 +51,7 @@
 		"postcss-loader": "^3.0.0",
 		"prettier": "^1.19.1",
 		"rimraf": "^3.0.0",
+		"specimen-boilerplate-support": "kabisa/specimen-boilerplate-support#master",
 		"stylelint": "^12.0.0",
 		"stylelint-config-prettier": "^7.0.0",
 		"stylelint-config-standard": "^19.0.0",

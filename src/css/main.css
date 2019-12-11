@@ -1,15 +1,7 @@
+@import "./_font-faces.css";
 @import "./_animation.css";
 @import "./_character-grid.css";
 @import "./_interactive-controls.css";
-
-/* Fonts stuff
-
-This will be replaced by calls to the Google Fonts API */
-@font-face {
-	font-family: example-font;
-	font-weight: 1 1000;
-	src: url("../fonts/example-font-file.woff2");
-}
 
 /* Variable font support */
 .variable-support {
@@ -57,5 +49,5 @@ ul {
 }
 
 body {
-	font-family: Fraunces; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
+	font-family: example-font, monospace;
 }
