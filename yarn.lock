@@ -8422,6 +8422,12 @@ specificity@^0.4.1:
   resolved "https://registry.yarnpkg.com/specificity/-/specificity-0.4.1.tgz#aab5e645012db08ba182e151165738d00887b019"
   integrity sha512-1klA3Gi5PD1Wv9Q0wUoOQN1IWAuPu0D1U03ThXTr0cJ20+/iq2tHSDnK7Kk/0LXJ1ztUB2/1Os0wKmfyNgUQfg==
 
+specimen-boilerplate-support@kabisa/specimen-boilerplate-support#master:
+  version "1.0.0"
+  resolved "git+ssh://git@github.com/kabisa/specimen-boilerplate-support.git#3d3e8f9cdb1be32383b524f36f859a34294db4ae"
+  dependencies:
+    fontkit "^1.8.0"
+
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/split-string/-/split-string-3.1.0.tgz#7cb09dda3a86585705c64b39a6466038682e8fe2"
