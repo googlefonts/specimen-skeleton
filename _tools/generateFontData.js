@@ -39,7 +39,8 @@ const writeDataFiles = async fontData => {
 };
 
 const writeCssFontFace = async (fontData, fontFilePath) => {
-	const fontFace = buildCssFontFace(fontData, fontFilePath);
+	const fontUrl = path.relative(path.dirname(fontFaceCssPath), fontFilePath);
+	const fontFace = buildCssFontFace(fontData, fontUrl);
 	return writeFile(fontFaceCssPath, fontFace);
 };
 
