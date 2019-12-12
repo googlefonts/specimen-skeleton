@@ -97,7 +97,12 @@ module.exports = {
 			ignoreOrder: false
 		}),
 		new ManifestPlugin({
-			fileName: "../src/_includes/.webpack/manifest.json"
+			fileName: "../src/_includes/.webpack/manifest.json",
+			map: file => {
+				// Strip queries like ?external from asset name
+				file.name = file.name.split("?")[0];
+				return file;
+			}
 		})
 	]
 };
