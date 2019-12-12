@@ -1,4 +1,5 @@
 import "../css/main.css";
+import "./assets.js";
 import FontFaceObserver from "fontfaceobserver";
 
 const fontName = "Fraunces";
