@@ -6,7 +6,7 @@ const htmlmin = require("html-minifier");
 
 const inputDir = path.resolve(__dirname, "./src");
 
-const webpackAsset = async name => {
+const webpackAssetPath = async name => {
 	const manifestData = await readFile(
 		path.resolve(inputDir, "_includes", ".webpack", "manifest.json")
 	);
@@ -23,22 +23,46 @@ const webpackAsset = async name => {
 };
 
 const webpackAssetContents = async name => {
-	const assetName = await webpackAsset(name);
+	const assetName = await webpackAssetPath(name);
 	const filePath = path.resolve(__dirname, "_site", assetName);
 
 	return readFile(filePath);
 };
 
+const relativePathTag = processPath => liquidEngine => {
+	return {
+		parse: function(tagToken) {
+			this.arg = tagToken.args;
+			this.templateFile = tagToken.file;
+		},
+		render: async function(scope) {
+			const fileParam =
+				liquidEngine.evalValue(this.arg, scope) || this.arg;
+
+			const resolvedFile = path.resolve(
+				path.dirname(this.templateFile),
+				fileParam
+			);
+
+			const srcRelativePath = path.relative(inputDir, resolvedFile);
+			return processPath(srcRelativePath);
+		}
+	};
+};
+
 module.exports = eleventyConfig => {
 	eleventyConfig.setUseGitIgnore(false);
 
-	eleventyConfig.addLiquidShortcode("webpackAsset", webpackAsset);
-	eleventyConfig.addLiquidShortcode(
-		"webpackAssetContents",
-		webpackAssetContents
-	);
-
 	eleventyConfig.addFilter("json_stringify", JSON.stringify);
+
+	eleventyConfig.addLiquidTag(
+		"webpackAssetPath",
+		relativePathTag(webpackAssetPath)
+	);
+	eleventyConfig.addLiquidTag(
+		"includeWebpackAsset",
+		relativePathTag(webpackAssetContents)
+	);
 
 	if (process.env.ELEVENTY_ENV === "production") {
 		eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
