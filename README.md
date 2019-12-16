@@ -31,7 +31,7 @@ In CSS, point to the file using the path relative to your CSS file:
 
 `background-image: url(../img/my_logo.svg);`
 
-Images below 8 KB will be inlined automatically. To force inlined or external, append `?inline` or `?external` respectively, e.g. `url(../img/my_logo.svg?external);`.
+In CSS, images below 8 KB will be inlined automatically. To force inlined or external, append `?inline` or `?external` respectively, e.g. `url(../img/my_logo.svg?external);`.
 
 ## Components
 
