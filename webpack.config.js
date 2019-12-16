@@ -7,6 +7,8 @@ const isProd = env === "production";
 const out = path.resolve(__dirname, "_site");
 const exclusions = /node_modules/;
 
+const inlineImgLimit = 8192;
+
 const optimization = {
 	splitChunks: isProd && { chunks: "all" },
 	minimize: isProd,
@@ -63,7 +65,29 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(png|jpg|svg)$/i,
+				test: /\.svg$/i,
+				oneOf: [
+					{
+						resourceQuery: /external/,
+						loader: "file-loader",
+						options: fileLoaderOptions
+					},
+					{
+						resourceQuery: /inline/,
+						loader: "svg-url-loader",
+						options: fileLoaderOptions
+					},
+					{
+						loader: "svg-url-loader",
+						options: {
+							...fileLoaderOptions,
+							limit: inlineImgLimit
+						}
+					}
+				]
+			},
+			{
+				test: /\.(png|jpg)$/i,
 				oneOf: [
 					{
 						resourceQuery: /external/,
@@ -74,15 +98,15 @@ module.exports = {
 						resourceQuery: /inline/,
 						loader: "url-loader",
 						options: {
-							limit: true,
-							...fileLoaderOptions
+							...fileLoaderOptions,
+							limit: true
 						}
 					},
 					{
 						loader: "url-loader",
 						options: {
-							limit: 8192,
-							...fileLoaderOptions
+							...fileLoaderOptions,
+							limit: inlineImgLimit
 						}
 					}
 				]
