@@ -4,6 +4,7 @@ const ManifestPlugin = require("webpack-manifest-plugin");
 
 const env = process.env.NODE_ENV || "development";
 const isProd = env === "production";
+const input = path.resolve(__dirname, "src");
 const out = path.resolve(__dirname, "_site");
 const exclusions = /node_modules/;
 
@@ -19,13 +20,17 @@ const optimization = {
 };
 
 const fileLoaderOptions = {
-	name: "[name].[hash].[ext]"
+	name: "[path][name].[hash].[ext]",
+	context: input
 };
 
 module.exports = {
 	mode: isProd ? "production" : "development",
 	entry: {
-		main: path.resolve(__dirname, "src", "js", "main.js")
+		main: [
+			path.resolve(input, "js", "main.js"),
+			path.resolve(input, "css", "main.css")
+		]
 	},
 	output: {
 		path: out,
@@ -56,7 +61,7 @@ module.exports = {
 				]
 			},
 			{
-				include: path.resolve(__dirname, "src", "fonts"),
+				include: path.resolve(input, "fonts"),
 				use: [
 					{
 						loader: "file-loader",
@@ -121,10 +126,25 @@ module.exports = {
 			ignoreOrder: false
 		}),
 		new ManifestPlugin({
-			fileName: "../src/_includes/.webpack/manifest.json",
+			fileName: path.resolve(
+				input,
+				"_includes",
+				".webpack",
+				"manifest.json"
+			),
 			map: file => {
-				// Strip queries like ?external from asset name
-				file.name = file.name.split("?")[0];
+				switch (file.name) {
+					case "main.js":
+						file.name = "js/main.js";
+						break;
+					case "main.css":
+						file.name = "css/main.css";
+						break;
+					default:
+						// Strip queries like ?external from asset name
+						file.name = file.name.split("?")[0];
+				}
+
 				return file;
 			}
 		})

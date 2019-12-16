@@ -11,8 +11,11 @@
 		<title>
 			{{ site.title or renderData.title or title or metadata.title }}
 		</title>
-		<link rel="stylesheet" href="{% webpackAsset 'main.css' %}" />
-		<script defer src="{% webpackAsset 'main.js' %}"></script>
+		<link
+			rel="stylesheet"
+			href="{% webpackAssetPath '../css/main.css' %}"
+		/>
+		<script defer src="{% webpackAssetPath '../js/main.js' %}"></script>
 	</head>
 
 	<body>

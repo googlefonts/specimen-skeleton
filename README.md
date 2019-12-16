@@ -17,6 +17,22 @@ The site will [automatically](./.github/workflows/ci.yml) be re-built and deploy
 - In HTML/CSS, use the `.variable-support` element to commuicate when variable fonts aren't supported.
 - Add `.animates` class to all elements that animate (and need to pause when outside viewport).
 
+## On using assets
+
+In HTML, to use an image from your `img` directory, use the following URL value with the relative path to your image:
+
+`<img src="{% webpackAssetPath '../img/my_logo.svg' %}">`
+
+If you want to inline an SVG image, use:
+
+`{% include '../img/my_logo.svg' %}`
+
+In CSS, point to the file using the path relative to your CSS file:
+
+`background-image: url(../img/my_logo.svg);`
+
+In CSS, images below 8 KB will be inlined automatically. To force inlined or external, append `?inline` or `?external` respectively, e.g. `url(../img/my_logo.svg?external);`.
+
 ## Components
 
 The boilerplate has some basic components you can base your specimen site on:
