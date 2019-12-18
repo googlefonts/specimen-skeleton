@@ -77,8 +77,9 @@ for (const interactive of interactives) {
 	}
 }
 
+// Watch if .am-i-in-view elements are visible on screen
+// and apply a class accordingly
 if ("IntersectionObserver" in window) {
-	// Pause animations when element is not in viewport
 	// eslint-disable-next-line compat/compat
 	const obs = new IntersectionObserver(els => {
 		els.forEach(el => {
@@ -88,7 +89,7 @@ if ("IntersectionObserver" in window) {
 		});
 	});
 
-	const elements = document.querySelectorAll(".animates");
+	const elements = document.querySelectorAll(".am-i-in-view");
 	elements.forEach(el => {
 		obs.observe(el);
 	});
