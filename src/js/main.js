@@ -1,7 +1,7 @@
 import "./assets.js";
 import FontFaceObserver from "fontfaceobserver";
 
-const fontName = "Fraunces";
+const fontName = "ScienceGothic-Medium";
 const fontTimeOut = 5000; // In milliseconds
 
 // Generic functions

@@ -1,5 +1,24 @@
 @font-face {
-	font-family: example-font;
-	font-weight: 1 1000;
-	src: url("../fonts/example-font-file.woff2");
+	font-family: ScienceGothic-Medium;
+	font-weight: 100 900;
+	font-stretch: 50 200;
+	src: url("../fonts/ScienceGothicVF.woff2");
+}
+
+:root {
+	--wght: 459.302001953125;
+	--wdth: 100;
+	--YOPQ: 122;
+	--slnt: 0;
+}
+
+*,
+*::before,
+*::after {
+	font-variation-settings: "wght" var(--wght), "wdth" var(--wdth),
+		"YOPQ" var(--YOPQ), "slnt" var(--slnt);
+}
+
+body {
+	font-family: ScienceGothic-Medium, monospace;
 }

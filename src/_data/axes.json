@@ -2,30 +2,29 @@
 	{
 		"axis": "wght",
 		"name": "Weight",
-		"min": 0,
-		"max": 1000,
+		"min": 100,
+		"max": 900,
+		"default": 459.302001953125
+	},
+	{
+		"axis": "wdth",
+		"name": "Width",
+		"min": 50,
+		"max": 200,
+		"default": 100
+	},
+	{
+		"axis": "YOPQ",
+		"name": "Y Opaque",
+		"min": 18,
+		"max": 122,
+		"default": 122
+	},
+	{
+		"axis": "slnt",
+		"name": "Slant",
+		"min": -10,
+		"max": 0,
 		"default": 0
-	},
-	{
-		"axis": "opsz",
-		"name": "Optical Size",
-		"min": 9,
-		"max": 144,
-		"default": 9
-	},
-	{
-		"axis": "GOOF",
-		"name": "Goofy",
-		"min": 0,
-		"max": 100,
-		"default": 0
-	},
-	{
-		"axis": "WONK",
-		"name": "Wonk",
-		"min": 0,
-		"max": 1,
-		"default": 0.5,
-		"step": 1
 	}
 ]
