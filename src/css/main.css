@@ -1,4 +1,4 @@
-@import "./_font-faces.css";
+@import "./_fonts.css";
 @import "./_animation.css";
 @import "./_character-grid.css";
 @import "./_interactive-controls.css";
@@ -18,20 +18,12 @@
 :root {
 	--page-bg: #fff;
 	--page-text: #000;
-
-	/* Font axes */
-	--opsz: 9;
-	--wght: 1;
-	--GOOF: 1;
-	--WONK: 0;
 }
 
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
-	font-variation-settings: "opsz" var(--opsz), "wght" var(--wght),
-		"GOOF" var(--GOOF), "WONK" var(--WONK);
 }
 
 html,
@@ -46,8 +38,4 @@ ol,
 ul {
 	list-style-type: none;
 	padding: 0;
-}
-
-body {
-	font-family: example-font, monospace;
 }

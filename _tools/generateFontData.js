@@ -9,7 +9,7 @@ const {
 const srcDirectory = path.resolve(__dirname, "../", "src");
 const fontsDirectory = path.resolve(srcDirectory, "fonts");
 const dataDirectory = path.resolve(srcDirectory, "_data");
-const fontFaceCssPath = path.resolve(srcDirectory, "css", "_font-faces.css");
+const fontFaceCssPath = path.resolve(srcDirectory, "css", "_fonts.css");
 
 const assert = (condition, message) => {
 	if (!condition) {
