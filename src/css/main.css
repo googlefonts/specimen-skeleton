@@ -1,6 +1,7 @@
 @import "./_font-faces.css";
 @import "./_generic.css";
 @import "./_variable-support.css";
+@import "./_loading.css";
 @import "./_layout.css";
 @import "./_animation.css";
 @import "./_character-grid.css";

@@ -2,14 +2,16 @@
 layout: default.html
 ---
 
+<div class="loading-message">
+	<span class="loading-message-loading">Loading...</span>
+	<span class="loading-message-failed">Failed :-(</span>
+</div>
+
+<div class="variable-support-message">
+	Your browser doesn't variable fonts :-(
+</div>
+
 <main>
-	<div class="variable-support">Your browser doesn't variable fonts :-(</div>
-
-	<h1>{{ site.title }}</h1>
-	<p>{{ site.description }}</p>
-
-	<hr />
-
 	{% include interactive-controls.html %}
 
 	<hr />
