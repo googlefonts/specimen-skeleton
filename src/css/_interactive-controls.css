@@ -1,1 +1,21 @@
-/* placeholder */
+.interactive-controls {
+	--label-width: 8em;
+}
+
+.interactive-controls-text {
+	font-size: calc(var(--font-size) * 1px);
+}
+
+.interactive-controls-instances,
+.interactive-controls-sliders li {
+	display: flex;
+}
+
+.interactive-controls label {
+	flex: none;
+	min-width: var(--label-width);
+}
+
+.interactive-controls-slider {
+	width: 100%;
+}

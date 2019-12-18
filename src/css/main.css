@@ -1,41 +1,7 @@
 @import "./_font-faces.css";
+@import "./_generic.css";
+@import "./_variable-support.css";
+@import "./_layout.css";
 @import "./_animation.css";
 @import "./_character-grid.css";
 @import "./_interactive-controls.css";
-
-/* Variable font support */
-.variable-support {
-	display: block;
-}
-
-@supports (font-variation-settings: normal) {
-	.variable-support {
-		display: none;
-	}
-}
-
-/* Setup */
-:root {
-	--page-bg: #fff;
-	--page-text: #000;
-}
-
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-html,
-body {
-	padding: 0;
-	margin: 0;
-	background: var(--page-bg);
-	color: var(--page-text);
-}
-
-ol,
-ul {
-	list-style-type: none;
-	padding: 0;
-}

@@ -46,7 +46,7 @@ for (const interactive of interactives) {
 		".interactive-controls-slider"
 	);
 	const instances = interactive.querySelector(
-		".interactive-controls-instances"
+		".interactive-controls-instances select"
 	);
 
 	const varset = (name, value) => {
@@ -60,7 +60,6 @@ for (const interactive of interactives) {
 			// Set new axis value to text area
 			varset(e.target.name, e.target.value);
 			// Unselect named instance dropdown
-			// Optionally, see if current axes match instance and select that
 			if (instances) {
 				instances.selectedIndex = -1;
 			}

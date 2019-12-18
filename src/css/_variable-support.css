@@ -1,0 +1,9 @@
+.variable-support {
+	display: block;
+}
+
+@supports (font-variation-settings: normal) {
+	.variable-support {
+		display: none;
+	}
+}
