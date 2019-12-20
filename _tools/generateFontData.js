@@ -3,13 +3,15 @@ const util = require("util");
 const path = require("path");
 const {
 	parseFontFile,
-	buildCssFontFace
-} = require("specimen-boilerplate-support/fontData");
+	buildStylesheet,
+	buildFontJs
+} = require("specimen-boilerplate-support");
 
 const srcDirectory = path.resolve(__dirname, "../", "src");
 const fontsDirectory = path.resolve(srcDirectory, "fonts");
 const dataDirectory = path.resolve(srcDirectory, "_data");
-const fontFaceCssPath = path.resolve(srcDirectory, "css", "_font-faces.css");
+const fontsStylesheetPath = path.resolve(srcDirectory, "css", "font.css");
+const fontJsPath = path.resolve(srcDirectory, "js", "font.js");
 
 const assert = (condition, message) => {
 	if (!condition) {
@@ -38,10 +40,18 @@ const writeDataFiles = async fontData => {
 	return Promise.all(promises);
 };
 
-const writeCssFontFace = async (fontData, fontFilePath) => {
-	const fontUrl = path.relative(path.dirname(fontFaceCssPath), fontFilePath);
-	const fontFace = buildCssFontFace(fontData, fontUrl);
-	return writeFile(fontFaceCssPath, fontFace);
+const writeStylesheet = async (fontData, fontFilePath) => {
+	const fontUrl = path.relative(
+		path.dirname(fontsStylesheetPath),
+		fontFilePath
+	);
+	const stylesheet = buildStylesheet(fontData, fontUrl).toString();
+	return writeFile(fontsStylesheetPath, stylesheet);
+};
+
+const writeFontJs = async fontData => {
+	const js = buildFontJs(fontData);
+	return writeFile(fontJsPath, js);
 };
 
 const findFirstFontFile = async directory => {
@@ -71,7 +81,8 @@ const main = async () => {
 
 		await Promise.all([
 			writeDataFiles(fontData.data),
-			writeCssFontFace(fontData, fontFilePath)
+			writeStylesheet(fontData, fontFilePath),
+			writeFontJs(fontData)
 		]);
 	} catch (e) {
 		console.error("Failed to generate font data.", e);
