@@ -67,6 +67,9 @@
 			"prettier --write",
 			"git add"
 		],
+		"*.js": [
+			"eslint"
+		],
 		"*.css": [
 			"stylelint"
 		]
