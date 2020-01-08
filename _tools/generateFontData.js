@@ -74,20 +74,18 @@ const findFirstFontFile = async directory => {
 };
 
 const main = async () => {
-	try {
-		const fontFilePath =
-			process.argv[2] || (await findFirstFontFile(fontsDirectory));
-		const fontData = await parseFontFile(fontFilePath);
+	const fontFilePath =
+		process.argv[2] || (await findFirstFontFile(fontsDirectory));
+	const fontData = await parseFontFile(fontFilePath);
 
-		await Promise.all([
-			writeDataFiles(fontData.data),
-			writeStylesheet(fontData, fontFilePath),
-			writeFontJs(fontData)
-		]);
-	} catch (e) {
-		console.error("Failed to generate font data.", e);
-		process.exit(1);
-	}
+	await Promise.all([
+		writeDataFiles(fontData.data),
+		writeStylesheet(fontData, fontFilePath),
+		writeFontJs(fontData)
+	]);
 };
 
-main();
+main().catch(e => {
+	process.exitCode = 1;
+	console.error("Failed to generate font data.", e);
+});
