@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<meta name="description" content="{{ site.description }}" />
 		{%- for metatag in site.metatags %}
-		<meta{% for m in metatag %} {{m[0]}}="{{m[1]}}" {% endfor %} />
+		<meta{% for m in metatag %} {{m[0]}}="{{m[1]|escape}}" {% endfor %} />
 		{%- endfor %}
 		<title>
 			{{ site.title or renderData.title or title or metadata.title }}
