@@ -28,11 +28,15 @@ If you want to inline an SVG image, use:
 
 `{% include '../img/my_logo.svg' %}`
 
+or
+
+`{% webpackAssetContents 'img/my_logo.svg' %}`
+
 In CSS, point to the file using the path relative to your CSS file:
 
 `background-image: url(../img/my_logo.svg);`
 
-In CSS, images below 8 KB will be inlined automatically. To force inlined or external, append `?inline` or `?external` respectively, e.g. `url(../img/my_logo.svg?external);`.
+In CSS, images below 8 KB will be inlined automatically. To force inlined or external, append `?inline` or `?external` respectively, e.g. `url(../img/my_logo.svg?external);`. Inlining in HTML files 
 
 ## Components
 
