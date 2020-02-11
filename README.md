@@ -5,6 +5,7 @@ This project requires Node.js >= 12 and [yarn](https://yarnpkg.com/).
 To get started, run the following commands from the root of the repo:
 
 - `yarn install`
+- `yarn fontdata` - this will generate data files for the font in `src/fonts`
 - `yarn start` - this will start the local development server, view at http://localhost:8080.
 
 The site will [automatically](./.github/workflows/ci.yml) be re-built and deployed on Github Pages every time the master branch is updated.
@@ -27,11 +28,15 @@ If you want to inline an SVG image, use:
 
 `{% include '../img/my_logo.svg' %}`
 
+or
+
+`{% webpackAssetContents 'img/my_logo.svg' %}`
+
 In CSS, point to the file using the path relative to your CSS file:
 
 `background-image: url(../img/my_logo.svg);`
 
-In CSS, images below 8 KB will be inlined automatically. To force inlined or external, append `?inline` or `?external` respectively, e.g. `url(../img/my_logo.svg?external);`.
+In CSS, images below 8 KB will be inlined automatically. To force inlined or external, append `?inline` or `?external` respectively, e.g. `url(../img/my_logo.svg?external);`. Inlining in HTML files 
 
 ## Components
 

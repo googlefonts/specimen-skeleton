@@ -1,12 +1,16 @@
 @font-face {
-	font-family: ScienceGothic-Medium;
+	font-family: "ScienceGothic-Medium";
+	src: url("../fonts/ScienceGothicVF.woff2");
 	font-weight: 100 900;
 	font-stretch: 50 200;
-	src: url("../fonts/ScienceGothicVF.woff2");
+}
+
+body {
+	font-family: "ScienceGothic-Medium", monospace;
 }
 
 :root {
-	--wght: 459.302001953125;
+	--wght: 400;
 	--wdth: 100;
 	--YOPQ: 122;
 	--slnt: 0;
@@ -17,8 +21,4 @@
 *::after {
 	font-variation-settings: "wght" var(--wght), "wdth" var(--wdth),
 		"YOPQ" var(--YOPQ), "slnt" var(--slnt);
-}
-
-body {
-	font-family: ScienceGothic-Medium, monospace;
 }

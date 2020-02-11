@@ -14,7 +14,7 @@
 		"start:eleventy": "eleventy --serve",
 		"prettier": "prettier '{src/**/*.{js,css,json,html},*.js,*.json,*.html}'",
 		"stylelint": "stylelint 'src/css/**/*.css'",
-		"eslint": "eslint src/",
+		"eslint": "eslint .",
 		"lint": "run-s 'prettier --check' eslint stylelint",
 		"test": "run-s lint",
 		"fontdata": "node _tools/generateFontData.js"
@@ -33,12 +33,14 @@
 		"@babel/core": "^7.7.4",
 		"@babel/preset-env": "^7.7.4",
 		"autoprefixer": "^9.7.2",
+		"babel-eslint": "^10.0.3",
 		"babel-loader": "^8.0.6",
 		"cross-env": "^6.0.3",
 		"css-loader": "^3.2.0",
 		"cssnano": "^4.1.10",
 		"eslint": "^6.7.2",
 		"eslint-plugin-compat": "^3.3.0",
+		"eslint-plugin-node": "^11.0.0",
 		"eslint-plugin-prettier": "^3.1.1",
 		"file-loader": "^5.0.2",
 		"html-minifier": "^4.0.0",
@@ -51,7 +53,7 @@
 		"postcss-loader": "^3.0.0",
 		"prettier": "^1.19.1",
 		"rimraf": "^3.0.0",
-		"specimen-boilerplate-support": "kabisa/specimen-boilerplate-support#master",
+		"specimen-boilerplate-support": "https://github.com/kabisa/specimen-boilerplate-support.git#master",
 		"stylelint": "^12.0.0",
 		"stylelint-config-prettier": "^7.0.0",
 		"stylelint-config-standard": "^19.0.0",
@@ -66,6 +68,9 @@
 		"*.{js,json,html,css}": [
 			"prettier --write",
 			"git add"
+		],
+		"*.js": [
+			"eslint"
 		],
 		"*.css": [
 			"stylelint"

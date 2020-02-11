@@ -1,7 +1,7 @@
 import "./assets.js";
+import { fontName } from "./font";
 import FontFaceObserver from "fontfaceobserver";
 
-const fontName = "ScienceGothic-Medium";
 const fontTimeOut = 5000; // In milliseconds
 
 // Generic throttle

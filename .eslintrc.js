@@ -1,23 +1,8 @@
 module.exports = {
-	env: {
-		browser: true,
-		es6: true,
-		commonjs: true
-	},
-	globals: {
-		process: true
-	},
-	plugins: ["compat", "prettier"],
-	extends: ["eslint:recommended"],
-	parserOptions: {
-		sourceType: "module",
-		ecmaFeatures: {
-			modules: true,
-			experimentalObjectRestSpread: true
-		}
-	},
+	plugins: ["prettier"],
+	extends: ["eslint:recommended", "plugin:node/recommended"],
 	rules: {
 		"prettier/prettier": "error",
-		"compat/compat": "error"
+		"node/no-unpublished-require": "off"
 	}
 };

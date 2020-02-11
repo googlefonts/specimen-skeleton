@@ -1,5 +1,41 @@
 [
 	{
+		"name": "Hairline UltCnd HiCntr Obl",
+		"axes": {
+			"wght": 100,
+			"wdth": 50,
+			"YOPQ": 18,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "Hairline UltCnd HiCntr",
+		"axes": {
+			"wght": 100,
+			"wdth": 50,
+			"YOPQ": 18,
+			"slnt": 0
+		}
+	},
+	{
+		"name": "Hairline UltCnd SmCntr Obl",
+		"axes": {
+			"wght": 100,
+			"wdth": 50,
+			"YOPQ": 70,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "Hairline UltCnd SmCntr",
+		"axes": {
+			"wght": 100,
+			"wdth": 50,
+			"YOPQ": 70,
+			"slnt": 0
+		}
+	},
+	{
 		"name": "Hairline UltCnd Obl",
 		"axes": {
 			"wght": 100,
@@ -14,6 +50,42 @@
 			"wght": 100,
 			"wdth": 50,
 			"YOPQ": 122,
+			"slnt": 0
+		}
+	},
+	{
+		"name": "Hairline Cnd HiCntr Obl",
+		"axes": {
+			"wght": 100,
+			"wdth": 75,
+			"YOPQ": 18,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "Hairline Cnd HiCntr",
+		"axes": {
+			"wght": 100,
+			"wdth": 75,
+			"YOPQ": 18,
+			"slnt": 0
+		}
+	},
+	{
+		"name": "Hairline Cnd SmCntr Obl",
+		"axes": {
+			"wght": 100,
+			"wdth": 75,
+			"YOPQ": 70,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "Hairline Cnd SmCntr",
+		"axes": {
+			"wght": 100,
+			"wdth": 75,
+			"YOPQ": 70,
 			"slnt": 0
 		}
 	},
@@ -36,6 +108,42 @@
 		}
 	},
 	{
+		"name": "Hairline HiCntr Obl",
+		"axes": {
+			"wght": 100,
+			"wdth": 100,
+			"YOPQ": 18,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "Hairline HiCntr",
+		"axes": {
+			"wght": 100,
+			"wdth": 100,
+			"YOPQ": 18,
+			"slnt": 0
+		}
+	},
+	{
+		"name": "Hairline SmCntr Obl",
+		"axes": {
+			"wght": 100,
+			"wdth": 100,
+			"YOPQ": 70,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "Hairline SmCntr",
+		"axes": {
+			"wght": 100,
+			"wdth": 100,
+			"YOPQ": 70,
+			"slnt": 0
+		}
+	},
+	{
 		"name": "Hairline Obl",
 		"axes": {
 			"wght": 100,
@@ -50,6 +158,42 @@
 			"wght": 100,
 			"wdth": 100,
 			"YOPQ": 122,
+			"slnt": 0
+		}
+	},
+	{
+		"name": "Hairline Exp HiCntr Obl",
+		"axes": {
+			"wght": 100,
+			"wdth": 150,
+			"YOPQ": 18,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "Hairline Exp HiCntr",
+		"axes": {
+			"wght": 100,
+			"wdth": 150,
+			"YOPQ": 18,
+			"slnt": 0
+		}
+	},
+	{
+		"name": "Hairline Exp SmCntr Obl",
+		"axes": {
+			"wght": 100,
+			"wdth": 150,
+			"YOPQ": 70,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "Hairline Exp SmCntr",
+		"axes": {
+			"wght": 100,
+			"wdth": 150,
+			"YOPQ": 70,
 			"slnt": 0
 		}
 	},
@@ -72,6 +216,42 @@
 		}
 	},
 	{
+		"name": "Hairline XExp HiCntr Obl",
+		"axes": {
+			"wght": 100,
+			"wdth": 200,
+			"YOPQ": 18,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "Hairline XExp HiCntr",
+		"axes": {
+			"wght": 100,
+			"wdth": 200,
+			"YOPQ": 18,
+			"slnt": 0
+		}
+	},
+	{
+		"name": "Hairline XExp SmCntr Obl",
+		"axes": {
+			"wght": 100,
+			"wdth": 200,
+			"YOPQ": 70,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "Hairline XExp SmCntr",
+		"axes": {
+			"wght": 100,
+			"wdth": 200,
+			"YOPQ": 70,
+			"slnt": 0
+		}
+	},
+	{
 		"name": "Hairline XExp Obl",
 		"axes": {
 			"wght": 100,
@@ -90,9 +270,45 @@
 		}
 	},
 	{
+		"name": "ExtraLight UltCnd HiCntr Obl",
+		"axes": {
+			"wght": 200,
+			"wdth": 50,
+			"YOPQ": 18,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "ExtraLight UltCnd HiCntr",
+		"axes": {
+			"wght": 200,
+			"wdth": 50,
+			"YOPQ": 18,
+			"slnt": 0
+		}
+	},
+	{
+		"name": "ExtraLight UltCnd SmCntr Obl",
+		"axes": {
+			"wght": 200,
+			"wdth": 50,
+			"YOPQ": 70,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "ExtraLight UltCnd SmCntr",
+		"axes": {
+			"wght": 200,
+			"wdth": 50,
+			"YOPQ": 70,
+			"slnt": 0
+		}
+	},
+	{
 		"name": "ExtraLight UltCnd Obl",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": -10
@@ -101,7 +317,7 @@
 	{
 		"name": "ExtraLight UltCnd",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": 0
@@ -110,7 +326,7 @@
 	{
 		"name": "ExtraLight Cnd HiCntr Obl",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": -10
@@ -119,16 +335,34 @@
 	{
 		"name": "ExtraLight Cnd HiCntr",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": 0
 		}
 	},
 	{
+		"name": "ExtraLight Cnd SmCntr Obl",
+		"axes": {
+			"wght": 200,
+			"wdth": 75,
+			"YOPQ": 70,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "ExtraLight Cnd SmCntr",
+		"axes": {
+			"wght": 200,
+			"wdth": 75,
+			"YOPQ": 70,
+			"slnt": 0
+		}
+	},
+	{
 		"name": "ExtraLight Cnd Obl",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": -10
@@ -137,7 +371,7 @@
 	{
 		"name": "ExtraLight Cnd",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": 0
@@ -146,7 +380,7 @@
 	{
 		"name": "ExtraLight HiCntr Obl",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": -10
@@ -155,16 +389,34 @@
 	{
 		"name": "ExtraLight HiCntr",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": 0
 		}
 	},
 	{
+		"name": "ExtraLight SmCntr Obl",
+		"axes": {
+			"wght": 200,
+			"wdth": 100,
+			"YOPQ": 70,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "ExtraLight SmCntr",
+		"axes": {
+			"wght": 200,
+			"wdth": 100,
+			"YOPQ": 70,
+			"slnt": 0
+		}
+	},
+	{
 		"name": "ExtraLight Obl",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": -10
@@ -173,7 +425,7 @@
 	{
 		"name": "ExtraLight",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": 0
@@ -182,7 +434,7 @@
 	{
 		"name": "ExtraLight Exp HiCntr Obl",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": -10
@@ -191,16 +443,34 @@
 	{
 		"name": "ExtraLight Exp HiCntr",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": 0
 		}
 	},
 	{
+		"name": "ExtraLight Exp SmCntr Obl",
+		"axes": {
+			"wght": 200,
+			"wdth": 150,
+			"YOPQ": 70,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "ExtraLight Exp SmCntr",
+		"axes": {
+			"wght": 200,
+			"wdth": 150,
+			"YOPQ": 70,
+			"slnt": 0
+		}
+	},
+	{
 		"name": "ExtraLight Exp Obl",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": -10
@@ -209,7 +479,7 @@
 	{
 		"name": "ExtraLight Exp",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": 0
@@ -218,7 +488,7 @@
 	{
 		"name": "ExtraLight XExp HiCntr Obl",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": -10
@@ -227,16 +497,34 @@
 	{
 		"name": "ExtraLight XExp HiCntr",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": 0
 		}
 	},
 	{
+		"name": "ExtraLight XExp SmCntr Obl",
+		"axes": {
+			"wght": 200,
+			"wdth": 200,
+			"YOPQ": 70,
+			"slnt": -10
+		}
+	},
+	{
+		"name": "ExtraLight XExp SmCntr",
+		"axes": {
+			"wght": 200,
+			"wdth": 200,
+			"YOPQ": 70,
+			"slnt": 0
+		}
+	},
+	{
 		"name": "ExtraLight XExp Obl",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": -10
@@ -245,7 +533,7 @@
 	{
 		"name": "ExtraLight XExp",
 		"axes": {
-			"wght": 270.5357208251953,
+			"wght": 200,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": 0
@@ -254,7 +542,7 @@
 	{
 		"name": "Light UltCnd HiCntr Obl",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 50,
 			"YOPQ": 18,
 			"slnt": -10
@@ -263,7 +551,7 @@
 	{
 		"name": "Light UltCnd HiCntr",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 50,
 			"YOPQ": 18,
 			"slnt": 0
@@ -272,7 +560,7 @@
 	{
 		"name": "Light UltCnd SmCntr Obl",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 50,
 			"YOPQ": 70,
 			"slnt": -10
@@ -281,7 +569,7 @@
 	{
 		"name": "Light UltCnd SmCntr",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 50,
 			"YOPQ": 70,
 			"slnt": 0
@@ -290,7 +578,7 @@
 	{
 		"name": "Light UltCnd Obl",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": -10
@@ -299,7 +587,7 @@
 	{
 		"name": "Light UltCnd",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": 0
@@ -308,7 +596,7 @@
 	{
 		"name": "Light Cnd HiCntr Obl",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": -10
@@ -317,7 +605,7 @@
 	{
 		"name": "Light Cnd HiCntr",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": 0
@@ -326,7 +614,7 @@
 	{
 		"name": "Light Cnd SmCntr Obl",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 75,
 			"YOPQ": 70,
 			"slnt": -10
@@ -335,7 +623,7 @@
 	{
 		"name": "Light Cnd SmCntr",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 75,
 			"YOPQ": 70,
 			"slnt": 0
@@ -344,7 +632,7 @@
 	{
 		"name": "Light Cnd Obl",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": -10
@@ -353,7 +641,7 @@
 	{
 		"name": "Light Cnd",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": 0
@@ -362,7 +650,7 @@
 	{
 		"name": "Light HiCntr Obl",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": -10
@@ -371,7 +659,7 @@
 	{
 		"name": "Light HiCntr",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": 0
@@ -380,7 +668,7 @@
 	{
 		"name": "Light SmCntr Obl",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 100,
 			"YOPQ": 70,
 			"slnt": -10
@@ -389,7 +677,7 @@
 	{
 		"name": "Light SmCntr",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 100,
 			"YOPQ": 70,
 			"slnt": 0
@@ -398,7 +686,7 @@
 	{
 		"name": "Light Obl",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": -10
@@ -407,7 +695,7 @@
 	{
 		"name": "Light",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": 0
@@ -416,7 +704,7 @@
 	{
 		"name": "Light Exp HiCntr Obl",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": -10
@@ -425,7 +713,7 @@
 	{
 		"name": "Light Exp HiCntr",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": 0
@@ -434,7 +722,7 @@
 	{
 		"name": "Light Exp SmCntr Obl",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 150,
 			"YOPQ": 70,
 			"slnt": -10
@@ -443,7 +731,7 @@
 	{
 		"name": "Light Exp SmCntr",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 150,
 			"YOPQ": 70,
 			"slnt": 0
@@ -452,7 +740,7 @@
 	{
 		"name": "Light Exp Obl",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": -10
@@ -461,7 +749,7 @@
 	{
 		"name": "Light Exp",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": 0
@@ -470,7 +758,7 @@
 	{
 		"name": "Light XExp HiCntr Obl",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": -10
@@ -479,7 +767,7 @@
 	{
 		"name": "Light XExp HiCntr",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": 0
@@ -488,7 +776,7 @@
 	{
 		"name": "Light XExp SmCntr Obl",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 200,
 			"YOPQ": 70,
 			"slnt": -10
@@ -497,7 +785,7 @@
 	{
 		"name": "Light XExp SmCntr",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 200,
 			"YOPQ": 70,
 			"slnt": 0
@@ -506,7 +794,7 @@
 	{
 		"name": "Light XExp Obl",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": -10
@@ -515,7 +803,7 @@
 	{
 		"name": "Light XExp",
 		"axes": {
-			"wght": 354.0816345214844,
+			"wght": 300,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": 0
@@ -524,7 +812,7 @@
 	{
 		"name": "UltCnd HiCntr Obl",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 50,
 			"YOPQ": 18,
 			"slnt": -10
@@ -533,7 +821,7 @@
 	{
 		"name": "UltCnd HiCntr",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 50,
 			"YOPQ": 18,
 			"slnt": 0
@@ -542,7 +830,7 @@
 	{
 		"name": "UltCnd SmCntr Obl",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 50,
 			"YOPQ": 70,
 			"slnt": -10
@@ -551,7 +839,7 @@
 	{
 		"name": "UltCnd SmCntr",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 50,
 			"YOPQ": 70,
 			"slnt": 0
@@ -560,7 +848,7 @@
 	{
 		"name": "UltCnd Obl",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": -10
@@ -569,7 +857,7 @@
 	{
 		"name": "UltCnd",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": 0
@@ -578,7 +866,7 @@
 	{
 		"name": "Cnd HiCntr Obl",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": -10
@@ -587,7 +875,7 @@
 	{
 		"name": "Cnd HiCntr",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": 0
@@ -596,7 +884,7 @@
 	{
 		"name": "Cnd SmCntr Obl",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 75,
 			"YOPQ": 70,
 			"slnt": -10
@@ -605,7 +893,7 @@
 	{
 		"name": "Cnd SmCntr",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 75,
 			"YOPQ": 70,
 			"slnt": 0
@@ -614,7 +902,7 @@
 	{
 		"name": "Cnd Obl",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": -10
@@ -623,7 +911,7 @@
 	{
 		"name": "Cnd",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": 0
@@ -632,7 +920,7 @@
 	{
 		"name": "HiCntr Obl",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": -10
@@ -641,7 +929,7 @@
 	{
 		"name": "HiCntr",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": 0
@@ -650,7 +938,7 @@
 	{
 		"name": "SmCntr Obl",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 100,
 			"YOPQ": 70,
 			"slnt": -10
@@ -659,7 +947,7 @@
 	{
 		"name": "SmCntr",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 100,
 			"YOPQ": 70,
 			"slnt": 0
@@ -668,7 +956,7 @@
 	{
 		"name": "Obl",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": -10
@@ -677,7 +965,7 @@
 	{
 		"name": "Regular",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": 0
@@ -686,7 +974,7 @@
 	{
 		"name": "Exp HiCntr Obl",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": -10
@@ -695,7 +983,7 @@
 	{
 		"name": "Exp HiCntr",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": 0
@@ -704,7 +992,7 @@
 	{
 		"name": "Exp SmCntr Obl",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 150,
 			"YOPQ": 70,
 			"slnt": -10
@@ -713,7 +1001,7 @@
 	{
 		"name": "Exp SmCntr",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 150,
 			"YOPQ": 70,
 			"slnt": 0
@@ -722,7 +1010,7 @@
 	{
 		"name": "Exp Obl",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": -10
@@ -731,7 +1019,7 @@
 	{
 		"name": "Exp",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": 0
@@ -740,7 +1028,7 @@
 	{
 		"name": "XExp HiCntr Obl",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": -10
@@ -749,7 +1037,7 @@
 	{
 		"name": "XExp HiCntr",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": 0
@@ -758,7 +1046,7 @@
 	{
 		"name": "XExp SmCntr Obl",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 200,
 			"YOPQ": 70,
 			"slnt": -10
@@ -767,7 +1055,7 @@
 	{
 		"name": "XExp SmCntr",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 200,
 			"YOPQ": 70,
 			"slnt": 0
@@ -776,7 +1064,7 @@
 	{
 		"name": "XExp Obl",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": -10
@@ -785,7 +1073,7 @@
 	{
 		"name": "XExp",
 		"axes": {
-			"wght": 459.302001953125,
+			"wght": 400,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": 0
@@ -794,7 +1082,7 @@
 	{
 		"name": "Medium UltCnd HiCntr Obl",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 50,
 			"YOPQ": 18,
 			"slnt": -10
@@ -803,7 +1091,7 @@
 	{
 		"name": "Medium UltCnd HiCntr",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 50,
 			"YOPQ": 18,
 			"slnt": 0
@@ -812,7 +1100,7 @@
 	{
 		"name": "Medium UltCnd SmCntr Obl",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 50,
 			"YOPQ": 70,
 			"slnt": -10
@@ -821,7 +1109,7 @@
 	{
 		"name": "Medium UltCnd SmCntr",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 50,
 			"YOPQ": 70,
 			"slnt": 0
@@ -830,7 +1118,7 @@
 	{
 		"name": "Medium UltCnd Obl",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": -10
@@ -839,7 +1127,7 @@
 	{
 		"name": "Medium UltCnd",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": 0
@@ -848,7 +1136,7 @@
 	{
 		"name": "Medium Cnd HiCntr Obl",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": -10
@@ -857,7 +1145,7 @@
 	{
 		"name": "Medium Cnd HiCntr",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": 0
@@ -866,7 +1154,7 @@
 	{
 		"name": "Medium Cnd SmCntr Obl",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 75,
 			"YOPQ": 70,
 			"slnt": -10
@@ -875,7 +1163,7 @@
 	{
 		"name": "Medium Cnd SmCntr",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 75,
 			"YOPQ": 70,
 			"slnt": 0
@@ -884,7 +1172,7 @@
 	{
 		"name": "Medium Cnd Obl",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": -10
@@ -893,7 +1181,7 @@
 	{
 		"name": "Medium Cnd",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": 0
@@ -902,7 +1190,7 @@
 	{
 		"name": "Medium HiCntr Obl",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": -10
@@ -911,7 +1199,7 @@
 	{
 		"name": "Medium HiCntr",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": 0
@@ -920,7 +1208,7 @@
 	{
 		"name": "Medium SmCntr Obl",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 100,
 			"YOPQ": 70,
 			"slnt": -10
@@ -929,7 +1217,7 @@
 	{
 		"name": "Medium SmCntr",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 100,
 			"YOPQ": 70,
 			"slnt": 0
@@ -938,7 +1226,7 @@
 	{
 		"name": "Medium Obl",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": -10
@@ -947,7 +1235,7 @@
 	{
 		"name": "Medium",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": 0
@@ -956,7 +1244,7 @@
 	{
 		"name": "Medium Exp HiCntr Obl",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": -10
@@ -965,7 +1253,7 @@
 	{
 		"name": "Medium Exp HiCntr",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": 0
@@ -974,7 +1262,7 @@
 	{
 		"name": "Medium Exp SmCntr Obl",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 150,
 			"YOPQ": 70,
 			"slnt": -10
@@ -983,7 +1271,7 @@
 	{
 		"name": "Medium Exp SmCntr",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 150,
 			"YOPQ": 70,
 			"slnt": 0
@@ -992,7 +1280,7 @@
 	{
 		"name": "Medium Exp Obl",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1001,7 +1289,7 @@
 	{
 		"name": "Medium Exp",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1010,7 +1298,7 @@
 	{
 		"name": "Medium XExp HiCntr Obl",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1019,7 +1307,7 @@
 	{
 		"name": "Medium XExp HiCntr",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1028,7 +1316,7 @@
 	{
 		"name": "Medium XExp SmCntr Obl",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 200,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1037,7 +1325,7 @@
 	{
 		"name": "Medium XExp SmCntr",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 200,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1046,7 +1334,7 @@
 	{
 		"name": "Medium XExp Obl",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1055,7 +1343,7 @@
 	{
 		"name": "Medium XExp",
 		"axes": {
-			"wght": 566.6666717529297,
+			"wght": 500,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1064,7 +1352,7 @@
 	{
 		"name": "SemiBold UltCnd HiCntr Obl",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 50,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1073,7 +1361,7 @@
 	{
 		"name": "SemiBold UltCnd HiCntr",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 50,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1082,7 +1370,7 @@
 	{
 		"name": "SemiBold UltCnd SmCntr Obl",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 50,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1091,7 +1379,7 @@
 	{
 		"name": "SemiBold UltCnd SmCntr",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 50,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1100,7 +1388,7 @@
 	{
 		"name": "SemiBold UltCnd Obl",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1109,7 +1397,7 @@
 	{
 		"name": "SemiBold UltCnd",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1118,7 +1406,7 @@
 	{
 		"name": "SemiBold Cnd HiCntr Obl",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1127,7 +1415,7 @@
 	{
 		"name": "SemiBold Cnd HiCntr",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1136,7 +1424,7 @@
 	{
 		"name": "SemiBold Cnd SmCntr Obl",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 75,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1145,7 +1433,7 @@
 	{
 		"name": "SemiBold Cnd SmCntr",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 75,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1154,7 +1442,7 @@
 	{
 		"name": "SemiBold Cnd Obl",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1163,7 +1451,7 @@
 	{
 		"name": "SemiBold Cnd",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1172,7 +1460,7 @@
 	{
 		"name": "SemiBold HiCntr Obl",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1181,7 +1469,7 @@
 	{
 		"name": "SemiBold HiCntr",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1190,7 +1478,7 @@
 	{
 		"name": "SemiBold SmCntr Obl",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 100,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1199,7 +1487,7 @@
 	{
 		"name": "SemiBold SmCntr",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 100,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1208,7 +1496,7 @@
 	{
 		"name": "SemiBold Obl",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1217,7 +1505,7 @@
 	{
 		"name": "SemiBold",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1226,7 +1514,7 @@
 	{
 		"name": "SemiBold Exp HiCntr Obl",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1235,7 +1523,7 @@
 	{
 		"name": "SemiBold Exp HiCntr",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1244,7 +1532,7 @@
 	{
 		"name": "SemiBold Exp SmCntr Obl",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 150,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1253,7 +1541,7 @@
 	{
 		"name": "SemiBold Exp SmCntr",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 150,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1262,7 +1550,7 @@
 	{
 		"name": "SemiBold Exp Obl",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1271,7 +1559,7 @@
 	{
 		"name": "SemiBold Exp",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1280,7 +1568,7 @@
 	{
 		"name": "SemiBold XExp HiCntr Obl",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1289,7 +1577,7 @@
 	{
 		"name": "SemiBold XExp HiCntr",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1298,7 +1586,7 @@
 	{
 		"name": "SemiBold XExp SmCntr Obl",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 200,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1307,7 +1595,7 @@
 	{
 		"name": "SemiBold XExp SmCntr",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 200,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1316,7 +1604,7 @@
 	{
 		"name": "SemiBold XExp Obl",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1325,7 +1613,7 @@
 	{
 		"name": "SemiBold XExp",
 		"axes": {
-			"wght": 657.3770446777344,
+			"wght": 600,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1334,7 +1622,7 @@
 	{
 		"name": "Bold UltCnd HiCntr Obl",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 50,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1343,7 +1631,7 @@
 	{
 		"name": "Bold UltCnd HiCntr",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 50,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1352,7 +1640,7 @@
 	{
 		"name": "Bold UltCnd SmCntr Obl",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 50,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1361,7 +1649,7 @@
 	{
 		"name": "Bold UltCnd SmCntr",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 50,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1370,7 +1658,7 @@
 	{
 		"name": "Bold UltCnd Obl",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1379,7 +1667,7 @@
 	{
 		"name": "Bold UltCnd",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1388,7 +1676,7 @@
 	{
 		"name": "Bold Cnd HiCntr Obl",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1397,7 +1685,7 @@
 	{
 		"name": "Bold Cnd HiCntr",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1406,7 +1694,7 @@
 	{
 		"name": "Bold Cnd SmCntr Obl",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 75,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1415,7 +1703,7 @@
 	{
 		"name": "Bold Cnd SmCntr",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 75,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1424,7 +1712,7 @@
 	{
 		"name": "Bold Cnd Obl",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1433,7 +1721,7 @@
 	{
 		"name": "Bold Cnd",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1442,7 +1730,7 @@
 	{
 		"name": "Bold HiCntr Obl",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1451,7 +1739,7 @@
 	{
 		"name": "Bold HiCntr",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1460,7 +1748,7 @@
 	{
 		"name": "Bold SmCntr Obl",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 100,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1469,7 +1757,7 @@
 	{
 		"name": "Bold SmCntr",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 100,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1478,7 +1766,7 @@
 	{
 		"name": "Bold Obl",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1487,7 +1775,7 @@
 	{
 		"name": "Bold",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1496,7 +1784,7 @@
 	{
 		"name": "Bold Exp HiCntr Obl",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1505,7 +1793,7 @@
 	{
 		"name": "Bold Exp HiCntr",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1514,7 +1802,7 @@
 	{
 		"name": "Bold Exp SmCntr Obl",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 150,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1523,7 +1811,7 @@
 	{
 		"name": "Bold Exp SmCntr",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 150,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1532,7 +1820,7 @@
 	{
 		"name": "Bold Exp Obl",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1541,7 +1829,7 @@
 	{
 		"name": "Bold Exp",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1550,7 +1838,7 @@
 	{
 		"name": "Bold XExp HiCntr Obl",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1559,7 +1847,7 @@
 	{
 		"name": "Bold XExp HiCntr",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1568,7 +1856,7 @@
 	{
 		"name": "Bold XExp SmCntr Obl",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 200,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1577,7 +1865,7 @@
 	{
 		"name": "Bold XExp SmCntr",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 200,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1586,7 +1874,7 @@
 	{
 		"name": "Bold XExp Obl",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1595,7 +1883,7 @@
 	{
 		"name": "Bold XExp",
 		"axes": {
-			"wght": 736.3013763427734,
+			"wght": 700,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1604,7 +1892,7 @@
 	{
 		"name": "ExtraBold UltCnd HiCntr Obl",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 50,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1613,7 +1901,7 @@
 	{
 		"name": "ExtraBold UltCnd HiCntr",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 50,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1622,7 +1910,7 @@
 	{
 		"name": "ExtraBold UltCnd SmCntr Obl",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 50,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1631,7 +1919,7 @@
 	{
 		"name": "ExtraBold UltCnd SmCntr",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 50,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1640,7 +1928,7 @@
 	{
 		"name": "ExtraBold UltCnd Obl",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1649,7 +1937,7 @@
 	{
 		"name": "ExtraBold UltCnd",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1658,7 +1946,7 @@
 	{
 		"name": "ExtraBold Cnd HiCntr Obl",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1667,7 +1955,7 @@
 	{
 		"name": "ExtraBold Cnd HiCntr",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1676,7 +1964,7 @@
 	{
 		"name": "ExtraBold Cnd SmCntr Obl",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 75,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1685,7 +1973,7 @@
 	{
 		"name": "ExtraBold Cnd SmCntr",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 75,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1694,7 +1982,7 @@
 	{
 		"name": "ExtraBold Cnd Obl",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1703,7 +1991,7 @@
 	{
 		"name": "ExtraBold Cnd",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1712,7 +2000,7 @@
 	{
 		"name": "ExtraBold HiCntr Obl",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1721,7 +2009,7 @@
 	{
 		"name": "ExtraBold HiCntr",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1730,7 +2018,7 @@
 	{
 		"name": "ExtraBold SmCntr Obl",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 100,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1739,7 +2027,7 @@
 	{
 		"name": "ExtraBold SmCntr",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 100,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1748,7 +2036,7 @@
 	{
 		"name": "ExtraBold Obl",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1757,7 +2045,7 @@
 	{
 		"name": "ExtraBold",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1766,7 +2054,7 @@
 	{
 		"name": "ExtraBold Exp HiCntr Obl",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1775,7 +2063,7 @@
 	{
 		"name": "ExtraBold Exp HiCntr",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1784,7 +2072,7 @@
 	{
 		"name": "ExtraBold Exp SmCntr Obl",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 150,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1793,7 +2081,7 @@
 	{
 		"name": "ExtraBold Exp SmCntr",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 150,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1802,7 +2090,7 @@
 	{
 		"name": "ExtraBold Exp Obl",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1811,7 +2099,7 @@
 	{
 		"name": "ExtraBold Exp",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1820,7 +2108,7 @@
 	{
 		"name": "ExtraBold XExp HiCntr Obl",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1829,7 +2117,7 @@
 	{
 		"name": "ExtraBold XExp HiCntr",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1838,7 +2126,7 @@
 	{
 		"name": "ExtraBold XExp SmCntr Obl",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 200,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1847,7 +2135,7 @@
 	{
 		"name": "ExtraBold XExp SmCntr",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 200,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1856,7 +2144,7 @@
 	{
 		"name": "ExtraBold XExp Obl",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1865,7 +2153,7 @@
 	{
 		"name": "ExtraBold XExp",
 		"axes": {
-			"wght": 805.7471313476562,
+			"wght": 800,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1874,7 +2162,7 @@
 	{
 		"name": "Black UltCnd HiCntr Obl",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 50,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1883,7 +2171,7 @@
 	{
 		"name": "Black UltCnd HiCntr",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 50,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1892,7 +2180,7 @@
 	{
 		"name": "Black UltCnd SmCntr Obl",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 50,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1901,7 +2189,7 @@
 	{
 		"name": "Black UltCnd SmCntr",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 50,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1910,7 +2198,7 @@
 	{
 		"name": "Black UltCnd Obl",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1919,7 +2207,7 @@
 	{
 		"name": "Black UltCnd",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 50,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1928,7 +2216,7 @@
 	{
 		"name": "Black Cnd HiCntr Obl",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1937,7 +2225,7 @@
 	{
 		"name": "Black Cnd HiCntr",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 75,
 			"YOPQ": 18,
 			"slnt": 0
@@ -1946,7 +2234,7 @@
 	{
 		"name": "Black Cnd SmCntr Obl",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 75,
 			"YOPQ": 70,
 			"slnt": -10
@@ -1955,7 +2243,7 @@
 	{
 		"name": "Black Cnd SmCntr",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 75,
 			"YOPQ": 70,
 			"slnt": 0
@@ -1964,7 +2252,7 @@
 	{
 		"name": "Black Cnd Obl",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": -10
@@ -1973,7 +2261,7 @@
 	{
 		"name": "Black Cnd",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 75,
 			"YOPQ": 122,
 			"slnt": 0
@@ -1982,7 +2270,7 @@
 	{
 		"name": "Black HiCntr Obl",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": -10
@@ -1991,7 +2279,7 @@
 	{
 		"name": "Black HiCntr",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 100,
 			"YOPQ": 18,
 			"slnt": 0
@@ -2000,7 +2288,7 @@
 	{
 		"name": "Black SmCntr Obl",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 100,
 			"YOPQ": 70,
 			"slnt": -10
@@ -2009,7 +2297,7 @@
 	{
 		"name": "Black SmCntr",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 100,
 			"YOPQ": 70,
 			"slnt": 0
@@ -2018,7 +2306,7 @@
 	{
 		"name": "Black Obl",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": -10
@@ -2027,7 +2315,7 @@
 	{
 		"name": "Black",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 100,
 			"YOPQ": 122,
 			"slnt": 0
@@ -2036,7 +2324,7 @@
 	{
 		"name": "Black Exp HiCntr Obl",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": -10
@@ -2045,7 +2333,7 @@
 	{
 		"name": "Black Exp HiCntr",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 150,
 			"YOPQ": 18,
 			"slnt": 0
@@ -2054,7 +2342,7 @@
 	{
 		"name": "Black Exp SmCntr Obl",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 150,
 			"YOPQ": 70,
 			"slnt": -10
@@ -2063,7 +2351,7 @@
 	{
 		"name": "Black Exp SmCntr",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 150,
 			"YOPQ": 70,
 			"slnt": 0
@@ -2072,7 +2360,7 @@
 	{
 		"name": "Black Exp Obl",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": -10
@@ -2081,7 +2369,7 @@
 	{
 		"name": "Black Exp",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 150,
 			"YOPQ": 122,
 			"slnt": 0
@@ -2090,7 +2378,7 @@
 	{
 		"name": "Black XExp HiCntr Obl",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": -10
@@ -2099,7 +2387,7 @@
 	{
 		"name": "Black XExp HiCntr",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 200,
 			"YOPQ": 18,
 			"slnt": 0
@@ -2108,7 +2396,7 @@
 	{
 		"name": "Black XExp SmCntr Obl",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 200,
 			"YOPQ": 70,
 			"slnt": -10
@@ -2117,7 +2405,7 @@
 	{
 		"name": "Black XExp SmCntr",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 200,
 			"YOPQ": 70,
 			"slnt": 0
@@ -2126,7 +2414,7 @@
 	{
 		"name": "Black XExp Obl",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": -10
@@ -2135,7 +2423,7 @@
 	{
 		"name": "Black XExp",
 		"axes": {
-			"wght": 865.5172424316406,
+			"wght": 900,
 			"wdth": 200,
 			"YOPQ": 122,
 			"slnt": 0

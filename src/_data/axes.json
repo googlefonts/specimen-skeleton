@@ -4,7 +4,7 @@
 		"name": "Weight",
 		"min": 100,
 		"max": 900,
-		"default": 459.302001953125
+		"default": 400
 	},
 	{
 		"axis": "wdth",
