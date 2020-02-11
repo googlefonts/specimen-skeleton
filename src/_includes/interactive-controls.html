@@ -31,9 +31,12 @@
 		{% endfor %}
 	</ul>
 
-	<div class="interactive-controls-instances">
+	<div>
 		<label for="interactive-controls-instances-select">Instances</label>
-		<select id="interactive-controls-instances-select">
+		<select
+			id="interactive-controls-instances-select"
+			class="interactive-controls-instances"
+		>
 			{% for instance in instances %}
 			<option value="{{ instance.axes | json_stringify | escape }}"
 				>{{ instance.name }}</option

@@ -1,7 +1,8 @@
 .animation {
-	transition: background 1s; /* To show effect of adding .in-view class */
-	animation: example-animation 4s infinite alternate;
+	transition: background 4s; /* To show effect of adding .in-view class */
+	animation: example-animation 1s infinite alternate;
 	animation-play-state: paused;
+	padding: 3em;
 }
 
 .animation.in-view {

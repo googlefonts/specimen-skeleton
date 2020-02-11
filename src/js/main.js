@@ -4,7 +4,7 @@ import FontFaceObserver from "fontfaceobserver";
 
 const fontTimeOut = 5000; // In milliseconds
 
-// Generic throttle
+// Generic: throttle
 const throttle = (fn, wait) => {
 	let last, queue;
 
@@ -34,7 +34,7 @@ font.load(null, fontTimeOut).then(
 	}
 );
 
-// Interactive contols (sliders that tweak axes)
+// Interactive controls (sliders that tweak axes)
 const interactives = document.querySelectorAll(".interactive-controls");
 for (const interactive of interactives) {
 	const area = interactive.querySelector(".interactive-controls-text");
@@ -42,7 +42,7 @@ for (const interactive of interactives) {
 		".interactive-controls-slider"
 	);
 	const instances = interactive.querySelector(
-		".interactive-controls-instances select"
+		".interactive-controls-instances"
 	);
 
 	const varset = (name, value) => {
@@ -56,6 +56,7 @@ for (const interactive of interactives) {
 			// Set new axis value to text area
 			varset(e.target.name, e.target.value);
 			// Unselect named instance dropdown
+			// Optionally, see if current axes match instance and select that
 			if (instances) {
 				instances.selectedIndex = -1;
 			}
