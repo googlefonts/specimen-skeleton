@@ -1,1 +1,1 @@
-export const fontName = "ScienceGothic-Medium";
+/* Placeholder */
