@@ -14,16 +14,19 @@ The site will [automatically](./.github/workflows/ci.yml) be re-built and deploy
 
 Specimen Skeleton is an [Eleventy-based](https://www.11ty.dev/) specimen _boilerplate_. It helps you get a basic site up and running quickly, and offers you a few interactive elements to build your demos from.
 
+It will analyse your variable font and generate the CSS necessary _and_ all the sliders, so you'll hit the ground running!
+
 ## What this isn't
 
 A full-blown specimen generator like [Specimen Tools](https://github.com/graphicore/specimenTools). We did some groundwork, but it's up to you to build the site!
 
 ## Checklist / getting started
 
+- Put your font in `src/fonts` and run `yarn fontdata`.
 - Configure the site in `src/_data/site.js`.
 - Add/edit font related data in the files in the `src/_data` directory.
 - In JavaScript, respond to fail/success of loading the font in the `FontFaceObserver` code.
-- In HTML/CSS, use the `.variable-support` element to commuicate when variable fonts aren't supported.
+- In HTML/CSS, use the `.variable-support` element to communicate when variable fonts aren't supported.
 - Start/stop heavy animations by using the `.am-i-in-view` and `.in-view` classes.
 
 ## On using assets
