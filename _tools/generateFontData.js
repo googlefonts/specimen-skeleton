@@ -55,7 +55,9 @@ const writeFontJs = async fontData => {
 };
 
 const findFirstFontFile = async directory => {
-	const fontFiles = await util.promisify(fs.readdir)(directory);
+	const fontFiles = (await util.promisify(fs.readdir)(directory)).filter(
+		f => path.extname(f) == ".woff2"
+	);
 
 	assert(
 		fontFiles.length > 0,
