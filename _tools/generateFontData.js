@@ -5,7 +5,7 @@ const {
 	parseFontFile,
 	buildStylesheet,
 	buildFontJs
-} = require("specimen-boilerplate-support");
+} = require("specimen-skeleton-support");
 
 const srcDirectory = path.resolve(__dirname, "../", "src");
 const fontsDirectory = path.resolve(srcDirectory, "fonts");
