@@ -1,3 +1,8 @@
+<p align="center">
+	<img width="400" height="400" src="https://user-images.githubusercontent.com/4570664/74532263-0db14500-4f2f-11ea-96e9-49bcb8699ebb.png">
+</p>
+<h1 align="center">Specimen Skeleton</h1>
+
 ## Project setup & development
 
 This project requires Node.js >= 12 and [yarn](https://yarnpkg.com/).
