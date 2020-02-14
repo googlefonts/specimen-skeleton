@@ -4,24 +4,19 @@ import FontFaceObserver from "fontfaceobserver";
 
 const fontTimeOut = 5000; // In milliseconds
 
-// Generic functions
-// From https://gist.github.com/beaucharman/e46b8e4d03ef30480d7f4db5a78498ca#gistcomment-3015837
+// Generic: throttle
 const throttle = (fn, wait) => {
-	let previouslyRun, queuedToRun;
+	let last, queue;
 
-	return function invokeFn(...args) {
+	return function runFn(...args) {
 		const now = Date.now();
+		queue = clearTimeout(queue);
 
-		queuedToRun = clearTimeout(queuedToRun);
-
-		if (!previouslyRun || now - previouslyRun >= wait) {
+		if (!last || now - last >= wait) {
 			fn.apply(null, args);
-			previouslyRun = now;
+			last = now;
 		} else {
-			queuedToRun = setTimeout(
-				invokeFn.bind(null, ...args),
-				wait - (now - previouslyRun)
-			);
+			queue = setTimeout(runFn.bind(null, ...args), wait - (now - last));
 		}
 	};
 };
@@ -30,15 +25,16 @@ const throttle = (fn, wait) => {
 const font = new FontFaceObserver(fontName);
 font.load(null, fontTimeOut).then(
 	() => {
-		console.log("Font is available");
-		document.documentElement.className += " fonts-loaded";
+		// Font has loaded
+		document.documentElement.classList.add("fonts-loaded");
 	},
 	() => {
-		console.log("Font is not available");
+		// Font didn't load
+		document.documentElement.classList.add("fonts-failed");
 	}
 );
 
-// Interactive contols (sliders that tweak axes)
+// Interactive controls (sliders that tweak axes)
 const interactives = document.querySelectorAll(".interactive-controls");
 for (const interactive of interactives) {
 	const area = interactive.querySelector(".interactive-controls-text");
@@ -82,8 +78,9 @@ for (const interactive of interactives) {
 	}
 }
 
+// Watch if .am-i-in-view elements are visible on screen
+// and apply a class accordingly
 if ("IntersectionObserver" in window) {
-	// Pause animations when element is not in viewport
 	// eslint-disable-next-line compat/compat
 	const obs = new IntersectionObserver(els => {
 		els.forEach(el => {
@@ -93,7 +90,7 @@ if ("IntersectionObserver" in window) {
 		});
 	});
 
-	const elements = document.querySelectorAll(".animates");
+	const elements = document.querySelectorAll(".am-i-in-view");
 	elements.forEach(el => {
 		obs.observe(el);
 	});

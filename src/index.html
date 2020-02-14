@@ -2,19 +2,23 @@
 layout: default.html
 ---
 
-<div class="variable-support">Your browser doesn't variable fonts :-(</div>
+<div class="loading-message">
+	<span class="loading-message-loading">Loading...</span>
+	<span class="loading-message-failed">Failed :-(</span>
+</div>
 
-<h1>{{ site.title }}</h1>
-<p>{{ site.description }}</p>
+<div class="variable-support-message">
+	Your browser doesn't do variable fonts :-(
+</div>
 
-<hr />
+<main>
+	{% include interactive-controls.html %}
 
-{% include interactive-controls.html %}
+	<hr />
 
-<hr />
+	{% include character-grid.html %}
 
-{% include character-grid.html %}
+	<hr />
 
-<hr />
-
-{% include animation.html %}
+	{% include animation.html %}
+</main>

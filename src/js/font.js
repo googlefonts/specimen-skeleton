@@ -1,1 +1,1 @@
-export const fontName = "Fraunces";
+/* Placeholder */

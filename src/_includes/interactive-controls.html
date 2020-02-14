@@ -1,5 +1,19 @@
 <div class="interactive-controls">
+	<h2>Axes & Instances</h2>
 	<ul class="interactive-controls-sliders">
+		<li>
+			<label for="interactive-controls-fontsize">Size</label>
+			<input
+				type="range"
+				min="9"
+				max="48"
+				value="16"
+				name="font-size"
+				id="interactive-controls-fontsize"
+				step="any"
+				class="interactive-controls-slider"
+			/>
+		</li>
 		{% for axis in axes %}
 		<li>
 			<label for="axis-{{ axis.axis }}">{{ axis.name }}</label>
@@ -17,19 +31,40 @@
 		{% endfor %}
 	</ul>
 
-	<select class="interactive-controls-instances">
-		{% for instance in instances %}
-		<option value="{{ instance.axes | json_stringify | escape }}"
-			>{{ instance.name }}</option
+	<div>
+		<label for="interactive-controls-instances-select">Instances</label>
+		<select
+			id="interactive-controls-instances-select"
+			class="interactive-controls-instances"
 		>
-		{% endfor %}
-	</select>
+			{% for instance in instances %}
+			<option value="{{ instance.axes | json_stringify | escape }}"
+				>{{ instance.name }}</option
+			>
+			{% endfor %}
+		</select>
+	</div>
 
 	<div class="interactive-controls-text">
 		<h1>Lorem</h1>
 		<p>
 			Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.
+			tempor incididunt ut labore et dolore magna aliqua. Est pellentesque
+			elit ullamcorper dignissim cras tincidunt. Consectetur adipiscing
+			elit duis tristique. Odio aenean sed adipiscing diam. Viverra mauris
+			in aliquam sem fringilla ut morbi. Nec nam aliquam sem et. In metus
+			vulputate eu scelerisque. Sed ullamcorper morbi tincidunt ornare
+			massa eget egestas. Venenatis urna cursus eget nunc scelerisque.
+			Habitasse platea dictumst quisque sagittis purus sit amet volutpat
+			consequat. Imperdiet nulla malesuada pellentesque elit eget gravida
+			cum sociis natoque. Laoreet non curabitur gravida arcu. Et magnis
+			dis parturient montes nascetur ridiculus mus mauris vitae. Arcu
+			cursus euismod quis viverra nibh. Adipiscing tristique risus nec
+			feugiat in fermentum posuere urna nec. In hac habitasse platea
+			dictumst quisque sagittis purus sit. Dui faucibus in ornare quam
+			viverra orci sagittis eu volutpat. Vitae auctor eu augue ut lectus
+			arcu bibendum at. Bibendum ut tristique et egestas quis ipsum
+			suspendisse ultrices.
 		</p>
 	</div>
 </div>

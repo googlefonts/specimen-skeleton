@@ -1,41 +1,8 @@
+@import "./animation.css";
+@import "./character-grid.css";
 @import "./font.css";
-@import "./_animation.css";
-@import "./_character-grid.css";
-@import "./_interactive-controls.css";
-
-/* Variable font support */
-.variable-support {
-	display: block;
-}
-
-@supports (font-variation-settings: normal) {
-	.variable-support {
-		display: none;
-	}
-}
-
-/* Setup */
-:root {
-	--page-bg: #fff;
-	--page-text: #000;
-}
-
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-html,
-body {
-	padding: 0;
-	margin: 0;
-	background: var(--page-bg);
-	color: var(--page-text);
-}
-
-ol,
-ul {
-	list-style-type: none;
-	padding: 0;
-}
+@import "./generic.css";
+@import "./interactive-controls.css";
+@import "./layout.css";
+@import "./loading.css";
+@import "./variable-support.css";
