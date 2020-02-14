@@ -1,5 +1,5 @@
 <p align="center">
-	<img width="400" height="400" src="https://user-images.githubusercontent.com/4570664/74532263-0db14500-4f2f-11ea-96e9-49bcb8699ebb.png">
+	<img width="320" height="320" src="https://user-images.githubusercontent.com/4570664/74532263-0db14500-4f2f-11ea-96e9-49bcb8699ebb.png">
 </p>
 <h1 align="center">Specimen Skeleton</h1>
 
