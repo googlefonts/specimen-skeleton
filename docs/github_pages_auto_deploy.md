@@ -12,7 +12,7 @@ Follow the following steps to enable it:
 2. In GitHub navigate to the repository settings and create a secret named `DEPLOY_KEY`.
    As value, use the contents of the `deploy-key` file generated in step 1.
    ![repo-settings](../.github/screenshots/deploy-setup-repo-settings.png)
-3. In GitHub add a deploy key:
+3. In GitHub add a deploy key (make sure to `Allow write access`!):
    ![deploy-key](../.github/screenshots/deploy-setup-deploy-keys.png)
    As value, use the contents of the `deploy-key.pub` file created in step 1.
 4. Edit `.github/workflows/ci.yml` to enable the deploy step for commits on the `master` branch:
