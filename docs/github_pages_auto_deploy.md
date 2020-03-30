@@ -14,7 +14,8 @@ Follow the following steps to enable it:
    ![repo-settings](../.github/screenshots/deploy-setup-repo-settings.png)
 3. In GitHub add a deploy key (make sure to `Allow write access`!):
    ![deploy-key](../.github/screenshots/deploy-setup-deploy-keys.png)
-   As value, use the contents of the `deploy-key.pub` file created in step 1.
+   As value, use the contents of the `deploy-key.pub` file created in step 1.  
+   Make sure `Allow write access` is checked.
 4. Edit `.github/workflows/ci.yml` to enable the deploy step for commits on the `master` branch:
    ```diff
       deploy:
