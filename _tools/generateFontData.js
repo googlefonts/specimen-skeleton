@@ -24,8 +24,8 @@ const {
 const srcDirectory = path.resolve(__dirname, "../", "src");
 const fontsDirectory = path.resolve(srcDirectory, "fonts");
 const dataDirectory = path.resolve(srcDirectory, "_data");
-const fontsStylesheetDirectory = path.resolve(srcDirectory, "css");
-const fontJsDirectory = path.resolve(srcDirectory, "js");
+const fontsStylesheetPath = path.resolve(srcDirectory, "css", "fonts.css");
+const fontJsPath = path.resolve(srcDirectory, "js", "fonts.js");
 
 const assert = (condition, message) => {
 	if (!condition) {
@@ -33,16 +33,19 @@ const assert = (condition, message) => {
 	}
 };
 
+const _appendFile = util.promisify(fs.appendFile);
 const _writeFile = util.promisify(fs.writeFile);
-const writeFile = (path, contents) => {
+const writeFile = (path, contents, append) => {
 	console.info("Writing", path);
+	if (append) {
+		return _appendFile(path, contents);
+	}
 	return _writeFile(path, contents);
 };
 
 const writeDataFile = async (filename, data) => {
 	const dataFilePath = path.join(dataDirectory, filename);
 	const fileContents = JSON.stringify(data, null, 4);
-
 	return writeFile(dataFilePath, fileContents);
 };
 
@@ -54,23 +57,19 @@ const writeDataFiles = async (fontData, fontName) => {
 	return Promise.all(promises);
 };
 
-const writeStylesheet = async (fontData, fontFile) => {
+const writeStylesheet = async (fontData, fontFilePath) => {
 	const fontUrl = path.relative(
-		path.dirname(fontsStylesheetDirectory),
-		fontFile.path
+		path.dirname(fontsStylesheetPath),
+		fontFilePath
 	);
-	const stylesheet = buildStylesheet(fontData, fontUrl).toString();
-	const stylesheetPath = path.resolve(
-		fontsStylesheetDirectory,
-		`${fontFile.name}.css`
-	);
-	return writeFile(stylesheetPath, stylesheet);
+	let stylesheet = buildStylesheet(fontData, fontUrl).toString();
+	stylesheet += "\n\n";
+	return writeFile(fontsStylesheetPath, stylesheet, true);
 };
 
-const writeFontJs = async (fontData, fontName) => {
+const writeFontJs = async fontData => {
 	const js = buildFontJs(fontData);
-	const jsPath = path.resolve(fontJsDirectory, `${fontName}.js`);
-	return writeFile(jsPath, js);
+	return writeFile(fontJsPath, js, true);
 };
 
 const findFontFile = async directory => {
@@ -97,11 +96,15 @@ const findFontFile = async directory => {
 const main = async () => {
 	const fontFiles = process.argv[2] || (await findFontFile(fontsDirectory));
 
+	// Initialise files
+	writeFile(fontsStylesheetPath, `/* Copyright! */\n`);
+	writeFile(fontJsPath, `export const fontNames = [];\n`);
+
 	for (const fontFile of fontFiles) {
 		const fontData = await parseFontFile(fontFile.path);
 		await Promise.all([
 			writeDataFiles(fontData.data, fontFile.name),
-			writeStylesheet(fontData, fontFile),
+			writeStylesheet(fontData, fontFile.path),
 			writeFontJs(fontData, fontFile.name)
 		]);
 	}
