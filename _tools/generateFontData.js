@@ -75,7 +75,7 @@ const findFirstFontFile = async directory => {
 
 	assert(
 		fontFiles.length > 0,
-		`No font file found. Place your font in ${path.relative(
+		`No WOFF2 font files found. Place your WOFF2 fonts in ${path.relative(
 			process.cwd(),
 			directory
 		)}.`
