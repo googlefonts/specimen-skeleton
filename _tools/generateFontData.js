@@ -24,8 +24,8 @@ const {
 const srcDirectory = path.resolve(__dirname, "../", "src");
 const fontsDirectory = path.resolve(srcDirectory, "fonts");
 const dataDirectory = path.resolve(srcDirectory, "_data");
-const fontsStylesheetPath = path.resolve(srcDirectory, "css", "font.css");
-const fontJsPath = path.resolve(srcDirectory, "js", "font.js");
+const fontsStylesheetDirectory = path.resolve(srcDirectory, "css");
+const fontJsDirectory = path.resolve(srcDirectory, "js");
 
 const assert = (condition, message) => {
 	if (!condition) {
@@ -46,29 +46,34 @@ const writeDataFile = async (filename, data) => {
 	return writeFile(dataFilePath, fileContents);
 };
 
-const writeDataFiles = async fontData => {
+const writeDataFiles = async (fontData, fontName) => {
 	const promises = Object.entries(fontData).map(([type, data]) => {
-		return writeDataFile(`${type}.json`, data);
+		return writeDataFile(`${fontName}-${type}.json`, data);
 	});
 
 	return Promise.all(promises);
 };
 
-const writeStylesheet = async (fontData, fontFilePath) => {
+const writeStylesheet = async (fontData, fontFile) => {
 	const fontUrl = path.relative(
-		path.dirname(fontsStylesheetPath),
-		fontFilePath
+		path.dirname(fontsStylesheetDirectory),
+		fontFile.path
 	);
 	const stylesheet = buildStylesheet(fontData, fontUrl).toString();
-	return writeFile(fontsStylesheetPath, stylesheet);
+	const stylesheetPath = path.resolve(
+		fontsStylesheetDirectory,
+		`${fontFile.name}.css`
+	);
+	return writeFile(stylesheetPath, stylesheet);
 };
 
-const writeFontJs = async fontData => {
+const writeFontJs = async (fontData, fontName) => {
 	const js = buildFontJs(fontData);
-	return writeFile(fontJsPath, js);
+	const jsPath = path.resolve(fontJsDirectory, `${fontName}.js`);
+	return writeFile(jsPath, js);
 };
 
-const findFirstFontFile = async directory => {
+const findFontFile = async directory => {
 	const fontFiles = (await util.promisify(fs.readdir)(directory)).filter(
 		f => path.extname(f) == ".woff2"
 	);
@@ -81,24 +86,25 @@ const findFirstFontFile = async directory => {
 		)}.`
 	);
 
-	assert(
-		fontFiles.length == 1,
-		"Multiple font files found. Please specify the path to your font file explicitly."
-	);
+	const paths = fontFiles.map(fontFile => ({
+		name: path.basename(fontFile, path.extname(fontFile)),
+		path: path.resolve(fontsDirectory, fontFile)
+	}));
 
-	return path.resolve(fontsDirectory, fontFiles[0]);
+	return paths;
 };
 
 const main = async () => {
-	const fontFilePath =
-		process.argv[2] || (await findFirstFontFile(fontsDirectory));
-	const fontData = await parseFontFile(fontFilePath);
+	const fontFiles = process.argv[2] || (await findFontFile(fontsDirectory));
 
-	await Promise.all([
-		writeDataFiles(fontData.data),
-		writeStylesheet(fontData, fontFilePath),
-		writeFontJs(fontData)
-	]);
+	for (const fontFile of fontFiles) {
+		const fontData = await parseFontFile(fontFile.path);
+		await Promise.all([
+			writeDataFiles(fontData.data, fontFile.name),
+			writeStylesheet(fontData, fontFile),
+			writeFontJs(fontData, fontFile.name)
+		]);
+	}
 };
 
 main().catch(e => {
