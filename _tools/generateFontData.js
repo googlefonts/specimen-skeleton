@@ -43,15 +43,17 @@ const writeFile = (path, contents, append) => {
 	return _writeFile(path, contents);
 };
 
-const writeDataFile = async (filename, data) => {
-	const dataFilePath = path.join(dataDirectory, filename);
-	const fileContents = JSON.stringify(data, null, 4);
-	return writeFile(dataFilePath, fileContents);
+const writeDataFile = async (filename, fontName, data) => {
+	fs.mkdir(path.join(dataDirectory, fontName), () => {
+		const dataFilePath = path.join(dataDirectory, fontName, filename);
+		const fileContents = JSON.stringify(data, null, 4);
+		return writeFile(dataFilePath, fileContents);
+	});
 };
 
 const writeDataFiles = async (fontData, fontName) => {
 	const promises = Object.entries(fontData).map(([type, data]) => {
-		return writeDataFile(`${fontName}-${type}.json`, data);
+		return writeDataFile(`${type}.json`, fontName, data);
 	});
 
 	return Promise.all(promises);
