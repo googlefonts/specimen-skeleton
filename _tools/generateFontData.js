@@ -23,7 +23,7 @@ const {
 
 const srcDirectory = path.resolve(__dirname, "../", "src");
 const fontsDirectory = path.resolve(srcDirectory, "fonts");
-const dataDirectory = path.resolve(srcDirectory, "_data");
+const dataDirectory = path.resolve(srcDirectory, "_data/fonts");
 const fontsStylesheetPath = path.resolve(srcDirectory, "css", "fonts.css");
 const fontJsPath = path.resolve(srcDirectory, "js", "fonts.js");
 
@@ -44,7 +44,7 @@ const writeFile = (path, contents, append) => {
 };
 
 const writeDataFile = async (filename, fontName, data) => {
-	fs.mkdir(path.join(dataDirectory, fontName), () => {
+	fs.mkdir(path.join(dataDirectory, fontName), { recursive: true }, () => {
 		const dataFilePath = path.join(dataDirectory, fontName, filename);
 		const fileContents = JSON.stringify(data, null, 4);
 		return writeFile(dataFilePath, fileContents);
