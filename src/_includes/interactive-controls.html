@@ -14,7 +14,7 @@
 				class="interactive-controls-slider"
 			/>
 		</li>
-		{% for axis in axes %}
+		{% for axis in font[1].axes %}
 		<li>
 			<label for="axis-{{ axis.axis }}">{{ axis.name }}</label>
 			<input
@@ -37,7 +37,7 @@
 			id="interactive-controls-instances-select"
 			class="interactive-controls-instances"
 		>
-			{% for instance in instances %}
+			{% for instance in font[1].instances %}
 			<option value="{{ instance.axes | json_stringify | escape }}"
 				>{{ instance.name }}</option
 			>

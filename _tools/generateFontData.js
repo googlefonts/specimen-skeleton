@@ -27,6 +27,14 @@ const dataDirectory = path.resolve(srcDirectory, "_data/fonts");
 const fontsStylesheetPath = path.resolve(srcDirectory, "css", "fonts.css");
 const fontJsPath = path.resolve(srcDirectory, "js", "fonts.js");
 
+const slugify = text => {
+	return text
+		.toLowerCase()
+		.replace(/ /g, "-")
+		.replace(/[-]+/g, "-")
+		.replace(/[^\w-]+/g, "");
+};
+
 const assert = (condition, message) => {
 	if (!condition) {
 		throw new Error(message);
@@ -53,7 +61,7 @@ const writeDataFile = async (filename, fontName, data) => {
 
 const writeDataFiles = async (fontData, fontName) => {
 	const promises = Object.entries(fontData).map(([type, data]) => {
-		return writeDataFile(`${type}.json`, fontName, data);
+		return writeDataFile(`${type}.json`, slugify(fontName), data);
 	});
 
 	return Promise.all(promises);

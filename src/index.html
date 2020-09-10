@@ -12,7 +12,8 @@ layout: default.html
 </div>
 
 <main>
-	{% include interactive-controls.html %}
+	{% for font in fonts %} {% if font[1].axes.length != 0 %} {% include
+	interactive-controls.html %} {% endif %} {% endfor %}
 
 	<hr />
 
