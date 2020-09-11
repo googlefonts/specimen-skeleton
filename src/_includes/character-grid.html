@@ -1,5 +1,7 @@
-<ol class="character-grid">
-	{% for char in charset %}
+<h2>Charset for {{ font[0] }}</h2>
+
+<ol class="character-grid {{ font[0] }}">
+	{% for char in font[1].charset %}
 	<li>{{ char }}</li>
 	{% endfor %}
 </ol>

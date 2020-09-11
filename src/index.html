@@ -12,13 +12,11 @@ layout: default.html
 </div>
 
 <main>
-	{% include interactive-controls.html %}
-
+	{% for font in fonts %} {% if font[1].axes.length != 0 %} {% include
+	interactive-controls.html %}
 	<hr />
-
-	{% include character-grid.html %}
-
+	{% endif %} {% endfor %} {% for font in fonts %} {% include
+	character-grid.html %}
 	<hr />
-
-	{% include animation.html %}
+	{% endfor %} {% include animation.html %}
 </main>
