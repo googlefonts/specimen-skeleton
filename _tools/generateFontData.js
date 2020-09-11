@@ -18,7 +18,8 @@ const path = require("path");
 const {
 	parseFontFile,
 	buildStylesheet,
-	buildFontJs
+	buildFontJs,
+	getSelector
 } = require("specimen-skeleton-support");
 
 const srcDirectory = path.resolve(__dirname, "../", "src");
@@ -26,14 +27,6 @@ const fontsDirectory = path.resolve(srcDirectory, "fonts");
 const dataDirectory = path.resolve(srcDirectory, "_data/fonts");
 const fontsStylesheetPath = path.resolve(srcDirectory, "css", "fonts.css");
 const fontJsPath = path.resolve(srcDirectory, "js", "fonts.js");
-
-const slugify = text => {
-	return text
-		.toLowerCase()
-		.replace(/ /g, "-")
-		.replace(/[-]+/g, "-")
-		.replace(/[^\w-]+/g, "");
-};
 
 const assert = (condition, message) => {
 	if (!condition) {
@@ -59,9 +52,9 @@ const writeDataFile = async (filename, fontName, data) => {
 	});
 };
 
-const writeDataFiles = async (fontData, fontName) => {
-	const promises = Object.entries(fontData).map(([type, data]) => {
-		return writeDataFile(`${type}.json`, slugify(fontName), data);
+const writeDataFiles = async fontData => {
+	const promises = Object.entries(fontData.data).map(([type, data]) => {
+		return writeDataFile(`${type}.json`, getSelector(fontData, true), data);
 	});
 
 	return Promise.all(promises);
@@ -119,7 +112,7 @@ const main = async () => {
 	for (const fontFile of fontFiles) {
 		const fontData = await parseFontFile(fontFile.path);
 		await Promise.all([
-			writeDataFiles(fontData.data, fontFile.name),
+			writeDataFiles(fontData, fontFile.name),
 			writeStylesheet(fontData, fontFile.path),
 			writeFontJs(fontData, fontFile.name)
 		]);
