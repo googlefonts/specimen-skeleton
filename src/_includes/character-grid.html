@@ -1,9 +1,21 @@
 <h2>Charset for {{ font[0] }}</h2>
 
-<ol class="character-grid {{ font[0] }}">
-	{% for char in font[1].charset %}
-		<li>&#x{{ char.unicode }};</li>
+{% for category in font[1].charset %}
+	{% for script in category[1] %}
+		{% for chars in script[1] %}
+			{% if chars[1].length != 0 %}
+				<h3>{{ category[0] }}
+				{{ script[0] }}</h3>
+
+				<ol class="character-grid {{ font[0] }}">
+				{% for char in chars[1] %}
+					<li>&#x{{ char }};</li>
+				{% endfor %}
+				</ol>
+			{% endif %}
+		{% endfor %}
 	{% endfor %}
-</ol>
+{% endfor %}
+
 
 <div class="character-grid-zoom"></div>
