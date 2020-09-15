@@ -2,7 +2,7 @@
 
 <ol class="character-grid {{ font[0] }}">
 	{% for char in font[1].charset %}
-	<li>{{ char }}</li>
+		<li>&#x{{ char.unicode }};</li>
 	{% endfor %}
 </ol>
 
