@@ -53,6 +53,19 @@ Promise.all(observers).then(
 	}
 );
 
+// Create a list of classnames based on the font names
+const getSelector = fontName => {
+	return fontName
+		.toLowerCase()
+		.replace(/ /g, "-")
+		.replace(/[-]+/g, "-")
+		.replace(/[^\w-]+/g, "");
+};
+
+const fontClasses = fontNames.map(f => {
+	return getSelector(f);
+});
+
 // Interactive controls (sliders that tweak axes)
 const interactives = document.querySelectorAll(".interactive-controls");
 for (const interactive of interactives) {
@@ -117,9 +130,17 @@ if ("IntersectionObserver" in window) {
 
 // Character grid
 const grid = document.querySelector(".character-grid");
+const gridlist = document.querySelector(".character-grid-list");
 const gridzoom = document.querySelector(".character-grid-zoom");
-grid.onmousemove = throttle(e => {
+const gridtoggle = document.querySelector(".character-grid-toggle");
+gridlist.onmousemove = throttle(e => {
 	if (e.target.tagName === "LI") {
 		gridzoom.innerHTML = e.target.innerHTML;
 	}
 }, 100);
+if (gridtoggle) {
+	gridtoggle.onchange = e => {
+		grid.classList.remove(...fontClasses);
+		grid.classList.add(e.target.value);
+	};
+}

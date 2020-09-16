@@ -4,7 +4,7 @@
 	--character-grid-gap: 1rem;
 }
 
-.character-grid {
+.character-grid-list {
 	list-style-type: none;
 	padding: 0;
 	display: grid;
@@ -17,7 +17,7 @@
 	font-size: var(--character-grid-font-zize);
 }
 
-.character-grid > li {
+.character-grid-list > li {
 	height: var(--character-grid-cell);
 	display: flex;
 	justify-content: center;
