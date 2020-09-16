@@ -38,7 +38,7 @@ const throttle = (fn, wait) => {
 // Set up FontFaceObserver
 let observers = [];
 for (const fontName of fontNames) {
-	const font = new FontFaceObserver(fontName);
+	const font = new FontFaceObserver(fontName.name);
 	observers.push(font.load(null, fontTimeOut));
 }
 
@@ -52,19 +52,6 @@ Promise.all(observers).then(
 		document.documentElement.classList.add("fonts-failed");
 	}
 );
-
-// Create a list of classnames based on the font names
-const getSelector = fontName => {
-	return fontName
-		.toLowerCase()
-		.replace(/ /g, "-")
-		.replace(/[-]+/g, "-")
-		.replace(/[^\w-]+/g, "");
-};
-
-const fontClasses = fontNames.map(f => {
-	return getSelector(f);
-});
 
 // Interactive controls (sliders that tweak axes)
 const interactives = document.querySelectorAll(".interactive-controls");
@@ -139,6 +126,7 @@ gridlist.onmousemove = throttle(e => {
 	}
 }, 100);
 if (gridtoggle) {
+	const fontClasses = fontNames.map(f => f.class);
 	gridtoggle.onchange = e => {
 		grid.classList.remove(...fontClasses);
 		grid.classList.add(e.target.value);
