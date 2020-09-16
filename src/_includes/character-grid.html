@@ -3,16 +3,16 @@
 {% for category in font[1].charset %}
 	{% for script in category[1] %}
 		{% for chars in script[1] %}
-			{% if chars[1].length != 0 %}
-				<h3>{{ category[0] }}
-				{{ script[0] }}</h3>
-
-				<ol class="character-grid {{ font[0] }}">
-				{% for char in chars[1] %}
-					<li>&#x{{ char }};</li>
-				{% endfor %}
-				</ol>
-			{% endif %}
+			<h3>
+				{{ category[0] }}
+				{% if script[0] != "undefined" %}{{ script[0] }}{% endif %}
+				{% if chars[0] != "undefined" %}{{ chars[0] }}{% endif %}
+			</h3>
+			<ol class="character-grid {{ font[0] }}">
+			{% for char in chars[1] %}
+				<li>&#x{{ char }};</li>
+			{% endfor %}
+			</ol>
 		{% endfor %}
 	{% endfor %}
 {% endfor %}
