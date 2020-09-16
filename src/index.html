@@ -12,17 +12,22 @@ layout: default.html
 </div>
 
 <main>
+	<!--
+	Loop over all fonts.
+	-->
 	{% for font in fonts %}
+		<!--
+		If this is a variable font (it has more than 0 axes),
+		show an "interactive-controls" component for it.
+		-->
 		{% if font[1].axes.length != 0 %}
 			{% include interactive-controls.html %}
 			<hr />
 		{% endif %}
 	{% endfor %}
 
-	{% for font in fonts %}
-		{% include character-grid.html %}
-		<hr />
-	{% endfor %}
+	{% include character-grid.html %}
+	<hr />
 
 	{% include animation.html %}
 </main>
