@@ -13,7 +13,7 @@
 // limitations under the License.
 
 import "./assets.js";
-import { fontNames } from "./fonts.js";
+import { fontData } from "./fonts.js";
 import FontFaceObserver from "fontfaceobserver";
 
 const fontTimeOut = 5000; // In milliseconds
@@ -37,8 +37,8 @@ const throttle = (fn, wait) => {
 
 // Set up FontFaceObserver
 let observers = [];
-for (const fontName of fontNames) {
-	const font = new FontFaceObserver(fontName.name);
+for (const fd of fontData) {
+	const font = new FontFaceObserver(fd.name);
 	observers.push(font.load(null, fontTimeOut));
 }
 
@@ -126,7 +126,7 @@ gridlist.onmousemove = throttle(e => {
 	}
 }, 100);
 if (gridtoggle) {
-	const fontClasses = fontNames.map(f => f.class);
+	const fontClasses = fontData.map(f => f.class);
 	gridtoggle.onchange = e => {
 		grid.classList.remove(...fontClasses);
 		grid.classList.add(e.target.value);
