@@ -1,21 +1,42 @@
 <h2>Charset for {{ font[0] }}</h2>
 
-{% for category in font[1].charset %}
-	{% for script in category[1] %}
-		{% for chars in script[1] %}
-			<h3>
-				{{ category[0] }}
-				{% if script[0] != "undefined" %}{{ script[0] }}{% endif %}
-				{% if chars[0] != "undefined" %}{{ chars[0] }}{% endif %}
-			</h3>
-			<ol class="character-grid {{ font[0] }}">
-			{% for char in chars[1] %}
-				<li>&#x{{ char }};</li>
+<!--
+Create a dropdown to select the font that should
+be applied to the character grid.
+-->
+<select class="character-grid-toggle">
+{% for font in fonts %}
+	<option value="{{ font[0] }}">{{ font[0] }}</option>
+{% endfor %}
+</select>
+
+{% for font in fonts %}
+<div class="character-grid {{ font[0] }}">
+	<!--
+	Draw a grid with the characters of the first font.
+	-->
+	{% for category in font[1].charset %}
+		{% for script in category[1] %}
+			{% for chars in script[1] %}
+				<h3>
+					{{ category[0] }}
+					{% if script[0] != "undefined" %}{{ script[0] }}{% endif %}
+					{% if chars[0] != "undefined" %}{{ chars[0] }}{% endif %}
+				</h3>
+				<ol class="character-grid-list">
+				{% for char in chars[1] %}
+					<li>&#x{{ char }};</li>
+				{% endfor %}
+				</ol>
 			{% endfor %}
-			</ol>
 		{% endfor %}
 	{% endfor %}
+
+	<div class="character-grid-zoom"></div>
+</div>
+<!--
+Break out of this loop, as the only need the
+first font to fill out character grid with.
+-->
+{% break %}
 {% endfor %}
-
-
-<div class="character-grid-zoom"></div>

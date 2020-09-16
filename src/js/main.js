@@ -13,7 +13,7 @@
 // limitations under the License.
 
 import "./assets.js";
-import { fontNames } from "./fonts.js";
+import { fontData } from "./fonts.js";
 import FontFaceObserver from "fontfaceobserver";
 
 const fontTimeOut = 5000; // In milliseconds
@@ -37,8 +37,8 @@ const throttle = (fn, wait) => {
 
 // Set up FontFaceObserver
 let observers = [];
-for (const fontName of fontNames) {
-	const font = new FontFaceObserver(fontName);
+for (const fd of fontData) {
+	const font = new FontFaceObserver(fd.name);
 	observers.push(font.load(null, fontTimeOut));
 }
 
@@ -117,9 +117,18 @@ if ("IntersectionObserver" in window) {
 
 // Character grid
 const grid = document.querySelector(".character-grid");
+const gridlist = document.querySelector(".character-grid-list");
 const gridzoom = document.querySelector(".character-grid-zoom");
-grid.onmousemove = throttle(e => {
+const gridtoggle = document.querySelector(".character-grid-toggle");
+gridlist.onmousemove = throttle(e => {
 	if (e.target.tagName === "LI") {
 		gridzoom.innerHTML = e.target.innerHTML;
 	}
 }, 100);
+if (gridtoggle) {
+	const fontClasses = fontData.map(f => f.class);
+	gridtoggle.onchange = e => {
+		grid.classList.remove(...fontClasses);
+		grid.classList.add(e.target.value);
+	};
+}
