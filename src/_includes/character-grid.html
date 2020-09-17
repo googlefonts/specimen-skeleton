@@ -16,6 +16,15 @@ be applied to the character grid.
 		Draw a grid with the characters of the first font.
 		-->
 		{% for set in font[1].charset %}
+			<!--
+			Skip the separators, we're not interested in those.
+			-->
+			{% if set.category == "Separator" %}
+				{% continue %}
+			{% endif %}
+			<!--
+			Create a title based on (sub)category and script.
+			-->
 			<h3>
 				{{ set.category }}
 				{% if set.subCategory %}
@@ -25,7 +34,9 @@ be applied to the character grid.
 					{{ set.script | capitalize }}
 				{% endif %}
 			</h3>
-
+			<!--
+			Print each char in this category
+			-->
 			<ol class="character-grid-list">
 			{% for char in set.chars %}
 				<li>&#x{{ char }};</li>
