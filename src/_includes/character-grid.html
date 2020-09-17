@@ -11,32 +11,33 @@ be applied to the character grid.
 </select>
 
 {% for font in fonts %}
-<div class="character-grid {{ font[0] }}">
-	<!--
-	Draw a grid with the characters of the first font.
-	-->
-	{% for category in font[1].charset %}
-		{% for script in category[1] %}
-			{% for chars in script[1] %}
-				<h3>
-					{{ category[0] }}
-					{% if script[0] != "undefined" %}{{ script[0] }}{% endif %}
-					{% if chars[0] != "undefined" %}{{ chars[0] }}{% endif %}
-				</h3>
-				<ol class="character-grid-list">
-				{% for char in chars[1] %}
-					<li>&#x{{ char }};</li>
-				{% endfor %}
-				</ol>
-			{% endfor %}
-		{% endfor %}
-	{% endfor %}
+	<div class="character-grid {{ font[0] }}">
+		<!--
+		Draw a grid with the characters of the first font.
+		-->
+		{% for set in font[1].charset %}
+			<h3>
+				{{ set.category }}
+				{% if set.subCategory %}
+					{{ set.subCategory }}
+				{% endif %}
+				{% if set.script %}
+					{{ set.script | capitalize }}
+				{% endif %}
+			</h3>
 
-	<div class="character-grid-zoom"></div>
-</div>
-<!--
-Break out of this loop, as the only need the
-first font to fill out character grid with.
--->
+			<ol class="character-grid-list">
+			{% for char in set.chars %}
+				<li>&#x{{ char }};</li>
+			{% endfor %}
+			</ol>
+		{% endfor %}
+
+		<div class="character-grid-zoom"></div>
+	</div>
+	<!--
+	Break out of this loop, as the only need the
+	first font to fill out character grid with.
+	-->
 {% break %}
 {% endfor %}
