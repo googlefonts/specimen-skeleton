@@ -12,6 +12,15 @@ layout: default.html
 </div>
 
 <main>
+	<ul>
+		{% for font in fonts %}
+			<li class="{{ font[0] }}">
+				Specimen Skeleton knows this font: {{ font[0] }}
+			</li>
+		{% endfor %}
+	</ul>
+	<hr>
+
 	<!--
 	Loop over all fonts.
 	-->
