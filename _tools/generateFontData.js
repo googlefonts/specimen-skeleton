@@ -99,6 +99,10 @@ const findFontFile = async directory => {
 const main = async () => {
 	const fontFiles = process.argv[2] || (await findFontFile(fontsDirectory));
 
+	// Clear out old data files
+	console.log("Deleting old data files");
+	fs.rmdirSync(dataDirectory, { recursive: true });
+
 	// Initialise files
 	writeFile(
 		fontsStylesheetPath,
