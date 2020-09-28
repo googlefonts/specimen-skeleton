@@ -12,6 +12,12 @@ layout: default.html
 </div>
 
 <main>
+	<!--
+	If multiple fonts in a family, pick the first one
+	from fontdata.json as the main font.
+	-->
+	{% assign mainfont = fontdata[0].selector %}
+
 	<ul>
 		{% for font in fonts %}
 			<li class="{{ font[0] }}">
@@ -19,23 +25,28 @@ layout: default.html
 			</li>
 		{% endfor %}
 	</ul>
+
+	<h2>Specimen Skeleton knows these fonts:</h2>
+	<ul>
+		{% for font in fontdata %}
+			<li class="{{ font.selector }}">
+				{{ font.name }} --
+				{{ font.style }} --
+				{{ font.selector }} --
+				{{ fonts[font.selector].axes.length }} axes --
+				{{ fonts[font.selector].instances.length }} instances
+			</li>
+		{% endfor %}
+	</ul>
+
 	<hr>
 
-	<!--
-	Loop over all fonts.
-	-->
-	{% for font in fonts %}
-		<!--
-		If this is a variable font (it has more than 0 axes),
-		show an "interactive-controls" component for it.
-		-->
-		{% if font[1].axes.length != 0 %}
-			{% include interactive-controls.html %}
-			<hr />
-		{% endif %}
-	{% endfor %}
+	{% include interactive-controls.html %}
+
+	<hr />
 
 	{% include character-grid.html %}
+
 	<hr />
 
 	{% include animation.html %}

@@ -1,6 +1,9 @@
-<div class="interactive-controls {{ font[0] }}">
-	<h2>Axes & Instances for {{ font[0] }}</h2>
+<div class="interactive-controls">
+	<h2>Axes & Instances for {{ fontdata[0].name }}</h2>
 	<ul class="interactive-controls-sliders">
+		<!--
+		Create a slider to control the font size.
+		-->
 		<li>
 			<label for="interactive-controls-fontsize">Size</label>
 			<input
@@ -14,38 +17,71 @@
 				class="interactive-controls-slider"
 			/>
 		</li>
-		{% for axis in font[1].axes %}
-		<li>
-			<label for="axis-{{ axis.axis }}">{{ axis.name }}</label>
-			<input
-				type="range"
-				min="{{ axis.min }}"
-				max="{{ axis.max }}"
-				value="{{ axis.default }}"
-				name="{{ axis.axis }}"
-				id="axis-{{ axis.axis }}"
-				step="{{ axis.step | default: 0.1 }}"
-				class="interactive-controls-slider"
-			/>
-		</li>
-		{% endfor %}
+		<!--
+		If the font has variable axes, also create a sliders
+		for each one of them.
+		-->
+		{% if fonts[mainfont].axes.length != 0 %}
+			{% for axis in fonts[mainfont].axes %}
+			<li>
+				<label for="axis-{{ axis.axis }}">{{ axis.name }}</label>
+				<input
+					type="range"
+					min="{{ axis.min }}"
+					max="{{ axis.max }}"
+					value="{{ axis.default }}"
+					name="{{ axis.axis }}"
+					id="axis-{{ axis.axis }}"
+					step="{{ axis.step | default: 0.1 }}"
+					class="interactive-controls-slider"
+				/>
+			</li>
+			{% endfor %}
+		{% endif %}
 	</ul>
 
-	<div>
-		<label for="interactive-controls-instances-select">Instances</label>
-		<select
-			id="interactive-controls-instances-select"
-			class="interactive-controls-instances"
-		>
-			{% for instance in font[1].instances %}
-			<option value="{{ instance.axes | json_stringify | escape }}"
-				>{{ instance.name }}</option
+	<!--
+	If the variable font has named instances, create a
+	dropdown so you can try them out.
+	-->
+	{% if fonts[mainfont].instances.length != 0 %}
+		<div>
+			<label for="interactive-controls-instances-select">Instances</label>
+			<select
+				id="interactive-controls-instances-select"
+				class="interactive-controls-instances"
 			>
-			{% endfor %}
-		</select>
-	</div>
+				{% for instance in fonts[mainfont].instances %}
+				<option value="{{ instance.axes | json_stringify | escape }}">
+					{{ instance.name }}
+				</option>
+				{% endfor %}
+			</select>
+		</div>
+	{% endif %}
 
-	<div class="interactive-controls-text">
+	<!--
+	If there are multiple fonts in this family, we expect
+	them to be styles (e.g. "bold" or "condensed") and
+	we list them here.
+	-->
+	{% if fontdata.length >= 2 %}
+		<div>
+			<label for="interactive-controls-instances-select">Styles</label>
+			<select
+				id="interactive-controls-instances-select"
+				class="interactive-controls-styles"
+			>
+				{% for font in fontdata %}
+				<option value="{{ font.selector }}">
+					{{ font.style }}
+				</option>
+				{% endfor %}
+			</select>
+		</div>
+	{% endif %}
+
+	<div class="interactive-controls-text {{ fontdata[0].selector }}">
 		<h1>Lorem</h1>
 		<p>
 			Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

@@ -5,13 +5,15 @@ Create a dropdown to select the font that should
 be applied to the character grid.
 -->
 <select class="character-grid-toggle">
-{% for font in fonts %}
-	<option value="{{ font[0] }}">{{ font[0] }}</option>
+{% for font in fontdata %}
+<option value="{{ font.selector }}">
+	{{ font.style }}
+</option>
 {% endfor %}
 </select>
 
 {% for font in fonts %}
-	<div class="character-grid {{ font[0] }}">
+	<div class="character-grid {{ fontdata[0].selector }}">
 		<!--
 		Draw a grid with the characters of the first font.
 		-->
