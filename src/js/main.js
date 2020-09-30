@@ -13,10 +13,11 @@
 // limitations under the License.
 
 import "./assets.js";
-import { fontData } from "./fonts.js";
+import fontData from "../_data/fontdata.json";
 import FontFaceObserver from "fontfaceobserver";
 
 const fontTimeOut = 5000; // In milliseconds
+const fontClasses = fontData.map(f => f.selector);
 
 // Generic: throttle
 const throttle = (fn, wait) => {
@@ -57,6 +58,7 @@ Promise.all(observers).then(
 const interactives = document.querySelectorAll(".interactive-controls");
 for (const interactive of interactives) {
 	const area = interactive.querySelector(".interactive-controls-text");
+	const styles = interactive.querySelector(".interactive-controls-styles");
 	const sliders = interactive.querySelectorAll(
 		".interactive-controls-slider"
 	);
@@ -95,6 +97,12 @@ for (const interactive of interactives) {
 			}
 		};
 	}
+	if (styles) {
+		styles.onchange = e => {
+			area.classList.remove(...fontClasses);
+			area.classList.add(e.target.value);
+		};
+	}
 }
 
 // Watch if .am-i-in-view elements are visible on screen
@@ -125,7 +133,6 @@ grid.onmousemove = throttle(e => {
 	}
 }, 100);
 if (gridtoggle) {
-	const fontClasses = fontData.map(f => f.class);
 	gridtoggle.onchange = e => {
 		grid.classList.remove(...fontClasses);
 		grid.classList.add(e.target.value);

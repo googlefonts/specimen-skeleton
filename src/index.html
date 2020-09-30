@@ -12,30 +12,51 @@ layout: default.html
 </div>
 
 <main>
+	<!--
+	You have two variables at your disposal:
+
+	fontdata: this is all the data in fontdata.json
+	fonts: these are additional details about the font,
+	       like charset, variable axes and instances.
+	-->
+
+	<!--
+	See fontdata.json and change the order of the fonts to
+	match the family structure. E.g. light → regular → bold.
+
+	You can specify which font is the "main" font (usually
+	the "regular" style), by assigning its ID to the main_id
+	variable. Note that counting starts at 0!
+	-->
+	{% assign main_id = 2 %}
+	{% assign main_selector = fontdata[main_id].selector %}
+
+	<h1>Specimen Skeleton for {{ fontdata[main_id].name }}</h1>
+
+	<h2>Specimen Skeleton knows these fonts:</h2>
 	<ul>
-		{% for font in fonts %}
-			<li class="{{ font[0] }}">
-				Specimen Skeleton knows this font: {{ font[0] }}
+		{% for font in fontdata %}
+			<li class="{{ font.selector }}">
+				{{ font.name }}
+				{{ font.style }}
+				{{ font.selector }}
+				{{ fonts[font.selector].axes.length }} axes
+				{{ fonts[font.selector].instances.length }} instances
+				{% if font.selector == main_selector %}
+				 (Main font)
+				{% endif %}
 			</li>
 		{% endfor %}
 	</ul>
+
 	<hr>
 
-	<!--
-	Loop over all fonts.
-	-->
-	{% for font in fonts %}
-		<!--
-		If this is a variable font (it has more than 0 axes),
-		show an "interactive-controls" component for it.
-		-->
-		{% if font[1].axes.length != 0 %}
-			{% include interactive-controls.html %}
-			<hr />
-		{% endif %}
-	{% endfor %}
+	{% include interactive-controls.html %}
+
+	<hr />
 
 	{% include character-grid.html %}
+
 	<hr />
 
 	{% include animation.html %}
