@@ -91,7 +91,7 @@ const findFontFile = async directory => {
 	return paths;
 };
 
-const getMetaData = async (fontData, fontFile) => {
+const getMetaData = (fontData, fontFile) => {
 	return {
 		name: fontFile.name,
 		selector: getSelector(fontData, true),
