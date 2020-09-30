@@ -37,9 +37,25 @@ A full-blown specimen generator like [Specimen Tools](https://github.com/graphic
 
 ## On using fonts
 
-The Specimen Skeleton loops over all fonts, and presents an object for each font with all data from the relevant `src/_data` files. You can loop over them, as the current example code does, or you can address them individually as you see fit. For example, instead of showing two character grids, one for ExampleFont Regular and one for ExampleFont Italic, you can render one grid and add a dropdown to toggle between regular and italic.
+You have two variables at your disposal, which will be generated when you run `yarn fontdata`. See the templates for some example on how to use them.
 
-This works best if you use fonts from the same family. Mixing fonts will get weird! (For example, the grid is created from the characters of one font — if the other doesn't contain the same characters, you'll get missing characters!)
+### fontdata
+
+The `fontdata` variable containsall metadata from `_data/fontdata.json`. This file contains a list of all the fonts found in `src/fonts`, and offers the following variables per font:
+
+`name`, containing the font name (e.g. Bungee Regular)
+`selector`, the CSS selector to apply the font (e.g. bungee-regular)
+`style`, the suggested style of this font (e.g. regular)
+
+You can change the order of these fonts, so the font family tree makes sense when you loop over them in the specimen (e.g. light weights first, bold weights last). You can also rename the suggested style, which Specimen Skeleton tries to derive from the tfilename. You shouldn't change the selector though — this is used to apply the font in CSS, and to pick fonts from the `fonts` variable.
+
+You can specify which font is the "main" font (usually the "regular" style), by assigning its ID to the `main_id` variable. Note that counting starts at 0!
+
+### fonts
+
+The Specimen Skeleton loops over all fonts, and presents an object for each font with all data from the relevant `src/_data` files. This `font` variable contains its charset, variable axes and variable instances. You can address these by their `selector` from the `fontdata` variable:
+
+`{{ fonts["bungee-regular"].charset }}`
 
 ## On using assets
 
