@@ -19,7 +19,7 @@ const {
 	parseFontFile,
 	buildStylesheet,
 	getSelector,
-	guessFontStyle
+	suggestFontStyle
 } = require("specimen-skeleton-support");
 
 const srcDirectory = path.resolve(__dirname, "../", "src");
@@ -95,7 +95,7 @@ const getMetaData = (fontData, fontFile) => {
 	return {
 		name: fontFile.name,
 		selector: getSelector(fontData, true),
-		style: guessFontStyle(fontFile.name)
+		style: suggestFontStyle(fontFile.name)
 	};
 };
 
