@@ -2,6 +2,9 @@
 :root {
 	--page-bg: #fff;
 	--page-text: #000;
+
+	/* Set fallback font for specimen here, e.g. Adobe NotDef */
+	--specimen-fallback-font: "";
 }
 
 *,
