@@ -94,3 +94,9 @@ Simple grid to show all characters in the font. On hover, the character will be 
 Simple example to stop CPU-melting animations when they're not in the viewport. Elements with the class `.am-i-in-view` will get a class `.in-view` when they're in the viewport, and have that class removed when they leave the viewport. Use this to start/stop heavy animations.
 
 Note: this can be repurposed for lazy loading images, pausing video, etc.
+
+## Stuff made with Specimen Skeleton
+
+- [Fraunces specimen site](https://fraunces.undercase.xyz/)
+- [Arapey specimen site](https://arapey.xyz/)
+- [Specimen Builder](https://typespecimens.xyz/builder/) by Mark Boulton ([demo](https://typespecimens.xyz/builder/demo/))
